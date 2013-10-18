@@ -1,0 +1,58 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Boot Performance</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/lib/html5bp.css">
+  <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="css/lib/dt-bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/modernizr-2.5.3.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1>Boot Time Details</h1>
+	<div class="totals">
+		<ul>
+			<li id="seconds"><b>Total Seconds: </b><span id="value"><%= data.values.map {|time| time.to_f}.inject(:+).round(3) %></span></li>
+			<li id="minutes"><b>Total Minutes: </b><span id="value"><%= (data.values.map {|time| time.to_f}.inject(:+)/60).round(3) %></span> </li>
+		</ul>
+	</div>
+  <table class="table table-striped table-bordered table-hover results-table">
+    <thead>
+	    <tr>
+	      <th>Script Name</th>
+	      <th>Duration(sec)</th>
+		    <th>Duration(min)</th>
+	    </tr>
+    </thead>
+    <tbody>
+    <% data.each do |k, v| %>
+      <tr>
+        <td><%= k %></td>
+        <td class="duration-seconds"><%= v %></td>
+	      <td class="duration-minutes"><%= (v.to_f/60).round(3) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+</div>
+<!-- /container -->
+
+<script src="js/lib/jquery-1.7.1.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/datatables.js"></script>
+<script src="js/lib/dtBootstrap.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

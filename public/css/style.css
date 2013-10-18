@@ -1,0 +1,44 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.form-audit {
+    max-width: 500px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-audit .form-audit-heading,
+.form-audit .checkbox {
+    margin-bottom: 10px;
+}
+.form-audit .checkbox {
+    font-weight: normal;
+}
+.form-audit .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-audit .form-control:focus {
+    z-index: 2;
+}
+.totals {
+    margin-bottom: 10px;
+}
+.totals ul {
+    margin: 0px;
+    padding-left: 0px;
+}
+.totals li {
+    display: inline;
+    padding: 0px 10px 0 10px;
+    border-right: 2px solid #eeeeee;
+    color: #5a5a5a;
+}

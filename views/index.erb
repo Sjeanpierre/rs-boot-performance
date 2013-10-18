@@ -1,0 +1,32 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Boot Performance</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/lib/html5bp.css">
+  <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/lib/modernizr-2.5.3.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <form action="/parse" method="post" class="form-audit">
+      <h2 class="form-audit-heading">Please Paste Audit entries</h2>
+      <textarea name="post[data]" class="form-control" rows="15" placeholder="Audit Entries" autofocus></textarea>
+
+      <button class="btn btn-lg btn-primary btn-block submit" type="submit">Process</button>
+    </form>
+
+  </div> <!-- /container -->
+  
+  <script src="js/lib/jquery-1.7.1.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
