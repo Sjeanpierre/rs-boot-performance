@@ -1,0 +1,2475 @@
+********************************************************************************
+*RS>                   Configuring software repositories                    ****
+*RS> Using the following software repositories:
+*RS>   - Apt::Ubuntu::Jaunty ["http://cf-mirror.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/ubuntu_daily"] @ 2013-07-18
+*RS>   - Yum::RightScale::Epel
+*RS> ["http://cf-mirror.rightscale.com/rightscale_software/epel",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/rightscale_software/epel",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/rightscale_software/epel",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/rightscale_software/epel"] @
+*RS> 2013-07-18
+*RS>   - Apt::Ubuntu::Quantal ["http://cf-mirror.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/ubuntu_daily"] @ 2013-07-18
+*RS>   - Yum::CentOS::Extras ["http://cf-mirror.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/centos"] @ 2013-07-18
+*RS>   - Yum::CentOS::Base ["http://cf-mirror.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/centos"] @ 2013-07-18
+*RS>   - Apt::Ubuntu::Lucid ["http://cf-mirror.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/ubuntu_daily"] @ 2013-07-18
+*RS>   - Gems::RubyGems ["http://ec2-us-east-mirror.rightscale.com/rubygems"] @
+*RS> 2013-07-18
+*RS>   - Yum::Epel ["http://cf-mirror.rightscale.com/epel",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/epel",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/epel",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/epel"] @ 2013-07-18
+*RS>   - Apt::RightScale::Precise
+*RS> ["http://cf-mirror.rightscale.com/rightscale_software_ubuntu"] @ 2013-07-18
+*RS>   - Apt::Ubuntu::Precise ["http://cf-mirror.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/ubuntu_daily"] @ 2013-07-18
+*RS>   - Apt::RightScale::Lucid
+*RS> ["http://cf-mirror.rightscale.com/rightscale_software_ubuntu"] @ 2013-07-18
+*RS>   - Apt::Ubuntu::Hardy ["http://cf-mirror.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/ubuntu_daily"] @ 2013-07-18
+*RS>   - Yum::CentOS::CentOSPlus ["http://cf-mirror.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/centos"] @ 2013-07-18
+*RS>   - Yum::CentOS::Updates ["http://cf-mirror.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/centos"] @ 2013-07-18
+*RS>   - Apt::Ubuntu::Maverick ["http://cf-mirror.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/ubuntu_daily"] @ 2013-07-18
+*RS>   - Apt::Ubuntu::Intrepid ["http://cf-mirror.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/ubuntu_daily",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/ubuntu_daily"] @ 2013-07-18
+*RS>   - Yum::CentOS::AddOns ["http://cf-mirror.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror1.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror2.rightscale.com/centos",
+*RS> "http://ec2-us-east-mirror3.rightscale.com/centos"] @ 2013-07-18
+*RS> Software repositories configured
+********************************************************************************
+*RS>                         Preparing boot bundle                          ****
+Loaded plugins: fastestmirror
+16 metadata files removed
+7 sqlite files removed
+0 metadata files removed
+*RS> Tags discovered on startup: 'rs_launch:type=auto', 'rs_login:state=active'
+*RS> Boot bundle ready
+********************************************************************************
+*RS>                        Downloading attachments                         ****
+*RS> Starting at Wed Oct 16 14:52:59 +0000 2013
+*RS> Downloading ruby-1.9.3p125-2.x86_64.rpm into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822577020/ruby-1.
+*RS> 9.3p125-2.x86_64.rpm directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/bcf0583738acbbd133a39beb6a1647
+*RS> af (7 MB) at 9 MB/s
+*RS> Downloading syslog-ng-remote.conf into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822572180/syslog-
+*RS> ng-remote.conf directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/842fad52df7c8f43b900341cb4a912
+*RS> 34 (3 KB) at 19 KB/s
+*RS> Downloading libmysqlclient.tar.gz into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822571080/libmysq
+*RS> lclient.tar.gz directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/69e01154fcd9b65135fcb2849580e4
+*RS> 5e (3 MB) at 7 MB/s
+*RS> Downloading libxml2-2.7.3-1.x86_64.rpm into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822568520/libxml2
+*RS> -2.7.3-1.x86_64.rpm directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/89c24c4815436e0b15b550f8fe7655
+*RS> e8 (867 KB) at 3 MB/s
+*RS> Downloading libxml2-devel-2.7.3-1.x86_64.rpm into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822568520/libxml2
+*RS> -devel-2.7.3-1.x86_64.rpm directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/ebb3b7f1876d96fbba6c0c1abd9b23
+*RS> 8c (2 MB) at 6 MB/s
+*RS> Downloading libxml2-python-2.7.3-1.x86_64.rpm into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822568520/libxml2
+*RS> -python-2.7.3-1.x86_64.rpm directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/8bf00e8ac3700378efbab42e1ee197
+*RS> 8b (645 KB) at 3 MB/s
+*RS> Downloading passenger_1.8.conf into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822547640/passeng
+*RS> er_1.8.conf directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/0da121b76e400c7d0d03ad384bfabe
+*RS> ba (263 B) at 2 KB/s
+*RS> Downloading passenger_1.9.1.conf into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822547640/passeng
+*RS> er_1.9.1.conf directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/0a1136e6639861d6ca918b1c4b6a50
+*RS> bd (264 B) at 2 KB/s
+*RS> Downloading gs_organisation_bundle.pem into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822545580/gs_orga
+*RS> nisation_bundle.pem directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/d0d76b5bc586e7b2c905ca418b7648
+*RS> f6 (1 KB) at 8 KB/s
+*RS> Downloading XXXXIdentity.pfx into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822542560/XXXX
+*RS> Identity.pfx directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/5164acb7479c332b94a566bb26721b
+*RS> ad (1 KB) at 13 KB/s
+*RS> Downloading XXXXOne_CA_Prod.pfx into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822542560/XXXXOne
+*RS> _CA_Prod.pfx directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/e36c6c3c744a67f49b7a56dd7ad575
+*RS> 4a (1 KB) at 9 KB/s
+*RS> Downloading digicert_XXXXbusinessbuilder_ucc.key into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/digicer
+*RS> t_XXXXbusinessbuilder_ucc.key directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/f4dfc56af5f0eedcf650153c7a4740
+*RS> e3 (1 KB) at 14 KB/s
+*RS> Downloading digicert_XXXXbusinessbuilder_ucc.crt into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/digicer
+*RS> t_XXXXbusinessbuilder_ucc.crt directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/b4eda6768e7a7f7eab31024dce1c0c
+*RS> fc (3 KB) at 30 KB/s
+*RS> Downloading digicert_XXXXbusinessbuilder_ucc.sf_crt into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/digicer
+*RS> t_XXXXbusinessbuilder_ucc.sf_crt directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/5678cc4d677bcc3677269c1e229743
+*RS> 3b (2 KB) at 16 KB/s
+*RS> Downloading vhosts.tmpl into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/vhosts.
+*RS> tmpl directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/d71af0db7fb0a8701d290a19e59a81
+*RS> 7f (4 KB) at 33 KB/s
+*RS> Downloading ssl.conf into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/ssl.con
+*RS> f directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/3853910b0799f4fa7bc9a9286e6179
+*RS> 2a (2 KB) at 24 KB/s
+*RS> Downloading app.XXXXonebeta.com-2013.key into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/app.XXX
+*RS> eonebeta.com-2013.key directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/c3acc171eefd8f7d757417ba7cf99b
+*RS> 38 (1 KB) at 15 KB/s
+*RS> Downloading app.XXXXonebeta.com-2013.crt into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/app.XXX
+*RS> eonebeta.com-2013.crt directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/a61dc75589a9bb0e20aabcb8b4cd9f
+*RS> 1b (1 KB) at 12 KB/s
+*RS> Downloading app.XXXXXXXX.com-2013.crt into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/app.XXX
+*RS> eXXXX.com-2013.crt directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/ef0bae93416c364e690cc79510e8a9
+*RS> 71 (1 KB) at 15 KB/s
+*RS> Downloading app.XXXXXXXX.com-2013.key into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/app.XXX
+*RS> eXXXX.com-2013.key directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/d0fa4da7dcc4f1a2854139eaecb21e
+*RS> 43 (1 KB) at 8 KB/s
+*RS> Downloading app.XXXXonestaging.com-2014.crt into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/app.XXX
+*RS> eonestaging.com-2014.crt directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/98f1287321964a562ceaa74a70d380
+*RS> 89 (1 KB) at 19 KB/s
+*RS> Downloading app.XXXXonestaging.com-2014.key into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822527800/app.XXX
+*RS> eonestaging.com-2014.key directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/1e8a1e0d028a893d0d91e960f1bdd9
+*RS> bc (1 KB) at 12 KB/s
+*RS> Downloading collectd-client.conf into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d-client.conf directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/c51d0100aaea82ebb44f0bca6e68c0
+*RS> bd (487 B) at 4 KB/s
+*RS> Downloading collectd-core_4.10.1-2_amd64.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d-core_4.10.1-2_amd64.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/5a6c821c85155fbb084414280351e0
+*RS> 2e (773 KB) at 2 MB/s
+*RS> Downloading collectd-utils_4.10.1-2_amd64.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d-utils_4.10.1-2_amd64.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/0fcac216425e133761cc80a3dae2ce
+*RS> 21 (66 KB) at 414 KB/s
+*RS> Downloading collectd_4.10.1-2_amd64.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d_4.10.1-2_amd64.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/3ff8fbd572e5b7a05c24ed8c20b71a
+*RS> ce (64 KB) at 417 KB/s
+*RS> Downloading libcollectdclient0_4.10.1-2_amd64.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/libcoll
+*RS> ectdclient0_4.10.1-2_amd64.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/81ee2fa54af99488526c5579a5c111
+*RS> e1 (65 KB) at 536 KB/s
+*RS> Downloading collectd-core_4.10.1-2_i386.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d-core_4.10.1-2_i386.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/08291cfbddeb60ae4b4e479de6be4d
+*RS> a1 (734 KB) at 1 MB/s
+*RS> Downloading collectd-utils_4.10.1-2_i386.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d-utils_4.10.1-2_i386.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/fc8fec62b9ceb130d71f51225a619f
+*RS> c3 (65 KB) at 153 KB/s
+*RS> Downloading collectd_4.10.1-2_i386.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d_4.10.1-2_i386.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/eec2da61442fbc18830ba71a84bf29
+*RS> d4 (64 KB) at 370 KB/s
+*RS> Downloading libcollectdclient0_4.10.1-2_i386.deb into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/libcoll
+*RS> ectdclient0_4.10.1-2_i386.deb directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/8e707f96bfda0a7f2578aa8895f1e8
+*RS> df (65 KB) at 149 KB/s
+*RS> Downloading collectd-4.10.0-4.el5.i386.rpm into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d-4.10.0-4.el5.i386.rpm directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/8d315cbd816ca2fb1c7fa8e87d5d4d
+*RS> 45 (490 KB) at 401 KB/s
+*RS> Downloading collectd-4.10.0-4.el5.x86_64.rpm into
+*RS> /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collect
+*RS> d-4.10.0-4.el5.x86_64.rpm directly
+*RS> Downloaded
+*RS> https://repose1.rightscale.com/attachments/1/635f1735456519fe966eef5626af73
+*RS> da (501 KB) at 1 MB/s
+*RS> Duration: 9.34 seconds
+********************************************************************************
+*RS>Installing packages: libyaml.x86_64 readline-devel mysql-devel mysql mysql-devel libxslt-devel sqlite-devel httpd httpd-devel mod_ssl collectd-apache monit****
+*RS> Starting at Wed Oct 16 14:53:08 +0000 2013
+*RS> Duration: 36.26 seconds
+********************************************************************************
+*RS>                          Retrieving cookbooks                          ****
+*RS> Starting at Wed Oct 16 14:53:45 +0000 2013
+*RS> Deleting existing cookbooks
+*RS> Requesting rightscale
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+ * addons: ec2-us-east-mirror3.rightscale.com
+ * base: ec2-us-east-mirror3.rightscale.com
+ * centosplus: ec2-us-east-mirror3.rightscale.com
+ * epel: ec2-us-east-mirror3.rightscale.com
+ * extras: ec2-us-east-mirror3.rightscale.com
+ * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+ * updates: ec2-us-east-mirror3.rightscale.com
+Setting up Install Process
+Package libyaml-0.1.2-3.el5.x86_64 already installed and latest version
+Package readline-devel-5.1-3.el5.x86_64 already installed and latest version
+Package readline-devel-5.1-3.el5.i386 already installed and latest version
+Package mysql-devel is obsoleted by MySQL-devel-community, trying to install MySQL-devel-community-5.1.55-1.rhel5.x86_64 instead
+Package MySQL-devel-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+Package mysql-devel is obsoleted by MySQL-devel-community, trying to install MySQL-devel-community-5.1.55-1.rhel5.x86_64 instead
+Package MySQL-devel-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+Package mysql is obsoleted by MySQL-server-community, trying to install MySQL-server-community-5.1.55-1.rhel5.x86_64 instead
+Package MySQL-server-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+Package mysql is obsoleted by MySQL-server-community, trying to install MySQL-server-community-5.1.55-1.rhel5.x86_64 instead
+Package MySQL-server-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+Package mysql-devel is obsoleted by MySQL-devel-community, trying to install MySQL-devel-community-5.1.55-1.rhel5.x86_64 instead
+Package MySQL-devel-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+Package mysql-devel is obsoleted by MySQL-devel-community, trying to install MySQL-devel-community-5.1.55-1.rhel5.x86_64 instead
+Package MySQL-devel-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package collectd-apache.x86_64 0:4.10.9-1.el5 set to be updated
+--> Processing Dependency: collectd = 4.10.9-1.el5 for package: collectd-apache
+---> Package httpd.x86_64 0:2.2.3-81.el5.centos set to be updated
+---> Package httpd-devel.i386 0:2.2.3-81.el5.centos set to be updated
+--> Processing Dependency: apr-util-devel for package: httpd-devel
+--> Processing Dependency: apr-devel for package: httpd-devel
+---> Package httpd-devel.x86_64 0:2.2.3-81.el5.centos set to be updated
+---> Package libxslt-devel.i386 0:1.1.17-4.el5_8.3 set to be updated
+--> Processing Dependency: libxml2-devel >= 2.5.6 for package: libxslt-devel
+--> Processing Dependency: libgcrypt-devel for package: libxslt-devel
+--> Processing Dependency: libexslt.so.0 for package: libxslt-devel
+--> Processing Dependency: libxslt.so.1 for package: libxslt-devel
+---> Package libxslt-devel.x86_64 0:1.1.17-4.el5_8.3 set to be updated
+---> Package mod_ssl.x86_64 1:2.2.3-81.el5.centos set to be updated
+--> Processing Dependency: libdistcache.so.1()(64bit) for package: mod_ssl
+--> Processing Dependency: libnal.so.1()(64bit) for package: mod_ssl
+---> Package monit.x86_64 0:4.10.1-9.el5 set to be updated
+---> Package sqlite-devel.i386 0:3.3.6-6 set to be updated
+---> Package sqlite-devel.x86_64 0:3.3.6-6 set to be updated
+--> Running transaction check
+---> Package apr-devel.x86_64 0:1.2.7-11.el5_6.5 set to be updated
+---> Package apr-util-devel.x86_64 0:1.2.7-11.el5_5.2 set to be updated
+--> Processing Dependency: openldap-devel for package: apr-util-devel
+--> Processing Dependency: db4-devel for package: apr-util-devel
+--> Processing Dependency: expat-devel for package: apr-util-devel
+---> Package collectd.x86_64 0:4.10.9-1.el5 set to be updated
+--> Processing Dependency: libpython2.6.so.1.0()(64bit) for package: collectd
+---> Package distcache.x86_64 0:1.4.5-14.1 set to be updated
+---> Package libgcrypt-devel.x86_64 0:1.4.4-5.el5_8.2 set to be updated
+--> Processing Dependency: libgpg-error-devel for package: libgcrypt-devel
+---> Package libxml2-devel.x86_64 0:2.6.26-2.1.21.el5_9.2 set to be updated
+---> Package libxslt.i386 0:1.1.17-4.el5_8.3 set to be updated
+--> Processing Dependency: libxml2.so.2 for package: libxslt
+--> Running transaction check
+---> Package db4-devel.x86_64 0:4.3.29-10.el5_5.2 set to be updated
+---> Package expat-devel.x86_64 0:1.95.8-11.el5_8 set to be updated
+---> Package libgpg-error-devel.x86_64 0:1.4-2 set to be updated
+---> Package libxml2.i386 0:2.6.26-2.1.21.el5_9.2 set to be updated
+---> Package openldap-devel.x86_64 0:2.3.43-25.el5_8.1 set to be updated
+--> Processing Dependency: cyrus-sasl-devel >= 2.1 for package: openldap-devel
+---> Package python26-libs.x86_64 0:2.6.8-2.el5 set to be updated
+--> Processing Dependency: python26 = 2.6.8-2.el5 for package: python26-libs
+--> Running transaction check
+---> Package cyrus-sasl-devel.x86_64 0:2.1.22-7.el5_8.1 set to be updated
+---> Package python26.x86_64 0:2.6.8-2.el5 set to be updated
+--> Processing Dependency: libffi.so.5()(64bit) for package: python26
+--> Running transaction check
+---> Package libffi.x86_64 0:3.0.5-1.el5 set to be updated
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                Arch       Version                    Repository   Size
+================================================================================
+Installing:
+ collectd-apache        x86_64     4.10.9-1.el5               epel         16 k
+ httpd                  x86_64     2.2.3-81.el5.centos        updates     1.3 M
+ httpd-devel            i386       2.2.3-81.el5.centos        updates     155 k
+ httpd-devel            x86_64     2.2.3-81.el5.centos        updates     155 k
+ libxslt-devel          i386       1.1.17-4.el5_8.3           base        230 k
+ libxslt-devel          x86_64     1.1.17-4.el5_8.3           base        241 k
+ mod_ssl                x86_64     1:2.2.3-81.el5.centos      updates      97 k
+ monit                  x86_64     4.10.1-9.el5               epel        238 k
+ sqlite-devel           i386       3.3.6-6                    base        258 k
+ sqlite-devel           x86_64     3.3.6-6                    base        257 k
+Installing for dependencies:
+ apr-devel              x86_64     1.2.7-11.el5_6.5           base        238 k
+ apr-util-devel         x86_64     1.2.7-11.el5_5.2           base         53 k
+ collectd               x86_64     4.10.9-1.el5               epel        498 k
+ cyrus-sasl-devel       x86_64     2.1.22-7.el5_8.1           base        1.4 M
+ db4-devel              x86_64     4.3.29-10.el5_5.2          base        2.0 M
+ distcache              x86_64     1.4.5-14.1                 base        121 k
+ expat-devel            x86_64     1.95.8-11.el5_8            base        129 k
+ libffi                 x86_64     3.0.5-1.el5                epel         24 k
+ libgcrypt-devel        x86_64     1.4.4-5.el5_8.2            base        388 k
+ libgpg-error-devel     x86_64     1.4-2                      base         17 k
+ libxml2                i386       2.6.26-2.1.21.el5_9.2      updates     798 k
+ libxml2-devel          x86_64     2.6.26-2.1.21.el5_9.2      updates     2.1 M
+ libxslt                i386       1.1.17-4.el5_8.3           base        420 k
+ openldap-devel         x86_64     2.3.43-25.el5_8.1          base        3.1 M
+ python26               x86_64     2.6.8-2.el5                epel        6.5 M
+ python26-libs          x86_64     2.6.8-2.el5                epel        695 k
+
+Transaction Summary
+================================================================================
+Install      26 Package(s)
+Upgrade       0 Package(s)
+
+Total download size: 21 M
+Downloading Packages:
+--------------------------------------------------------------------------------
+Total                                            29 MB/s |  21 MB     00:00
+Running rpm_check_debug
+Running Transaction Test
+Finished Transaction Test
+Transaction Test Succeeded
+Running Transaction
+
+  Installing     : httpd                                                   1/26
+
+  Installing     : apr-devel                                               2/26
+
+  Installing     : distcache                                               3/26
+
+  Installing     : cyrus-sasl-devel                                        4/26
+
+  Installing     : libffi                                                  5/26
+
+  Installing     : openldap-devel                                          6/26
+
+  Installing     : expat-devel                                             7/26
+
+  Installing     : db4-devel                                               8/26
+
+  Installing     : apr-util-devel                                          9/26
+
+  Installing     : libgpg-error-devel                                     10/26
+
+  Installing     : mod_ssl                                                11/26
+
+  Installing     : monit                                                  12/26
+
+  Installing     : libgcrypt-devel                                        13/26
+
+  Installing     : httpd-devel                                            14/26
+
+  Installing     : httpd-devel                                            15/26
+
+  Installing     : sqlite-devel                                           16/26
+
+  Installing     : sqlite-devel                                           17/26
+
+  Installing     : libxml2                                                18/26
+
+  Installing     : libxslt                                                19/26
+
+  Installing     : libxml2-devel                                          20/26
+
+  Installing     : libxslt-devel                                          21/26
+
+  Installing     : libxslt-devel                                          22/26
+
+  Installing     : python26-libs                                          23/26
+
+  Installing     : collectd                                               24/26
+
+  Installing     : collectd-apache                                        25/26
+
+  Installing     : python26                                               26/26
+
+Installed:
+  collectd-apache.x86_64 0:4.10.9-1.el5
+  httpd.x86_64 0:2.2.3-81.el5.centos
+  httpd-devel.i386 0:2.2.3-81.el5.centos
+  httpd-devel.x86_64 0:2.2.3-81.el5.centos
+  libxslt-devel.i386 0:1.1.17-4.el5_8.3
+  libxslt-devel.x86_64 0:1.1.17-4.el5_8.3
+  mod_ssl.x86_64 1:2.2.3-81.el5.centos
+  monit.x86_64 0:4.10.1-9.el5
+  sqlite-devel.i386 0:3.3.6-6
+  sqlite-devel.x86_64 0:3.3.6-6
+
+Dependency Installed:
+  apr-devel.x86_64 0:1.2.7-11.el5_6.5
+  apr-util-devel.x86_64 0:1.2.7-11.el5_5.2
+  collectd.x86_64 0:4.10.9-1.el5
+  cyrus-sasl-devel.x86_64 0:2.1.22-7.el5_8.1
+  db4-devel.x86_64 0:4.3.29-10.el5_5.2
+  distcache.x86_64 0:1.4.5-14.1
+  expat-devel.x86_64 0:1.95.8-11.el5_8
+  libffi.x86_64 0:3.0.5-1.el5
+  libgcrypt-devel.x86_64 0:1.4.4-5.el5_8.2
+  libgpg-error-devel.x86_64 0:1.4-2
+  libxml2.i386 0:2.6.26-2.1.21.el5_9.2
+  libxml2-devel.x86_64 0:2.6.26-2.1.21.el5_9.2
+  libxslt.i386 0:1.1.17-4.el5_8.3
+  openldap-devel.x86_64 0:2.3.43-25.el5_8.1
+  python26.x86_64 0:2.6.8-2.el5
+  python26-libs.x86_64 0:2.6.8-2.el5
+
+Complete!
+*RS> Success; unarchiving cookbook
+
+*RS> Requesting redis
+*RS> Success; unarchiving cookbook
+
+*RS> Duration: 1.25 seconds
+********************************************************************************
+*RS>                               Converging                               ****
+*RS> Run list: right_scripts_cookbook::SYS_Timezone_set_v1,
+*RS> right_scripts_cookbook::MAIL_Postfix_Local_Delivery_v1,
+*RS> right_scripts_cookbook::XXXX_SSHD_Verbose_Logging,
+*RS> right_scripts_cookbook::XXXX_Apply_CentOS_Security_Updates,
+*RS> right_scripts_cookbook::XXXX_XXXX_Install_Ruby_1_9_3_v1,
+*RS> right_scripts_cookbook::XXXX_Install_Python_2_6,
+*RS> right_scripts_cookbook::MISC_ssh_priv_key_install_v2,
+*RS> right_scripts_cookbook::XXXX_SYS_RAILS_ENV___XXX_config_into_system_profile
+*RS> _v1, right_scripts_cookbook::XXXX_XXXX_Ops_UTIL_install_script,
+*RS> right_scripts_cookbook::XXXXOne_SYS_Syslog_Remote_Logging_Client,
+*RS> right_scripts_cookbook::DB_MySQL_gem_install_v4,
+*RS> right_scripts_cookbook::XXXX_Install_libxml,
+*RS> right_scripts_cookbook::XXXX_Ruby_custom_gem_install_v5,
+*RS> right_scripts_cookbook::AIO_GIT_PULL_TARBALL,
+*RS> right_scripts_cookbook::restructure_platform_directory,
+*RS> right_scripts_cookbook::Link_latest_release_to_current,
+*RS> right_scripts_cookbook::set_XXX_gem_credentials,
+*RS> right_scripts_cookbook::Bundle_install_multi_app,
+*RS> right_scripts_cookbook::Configure_application_settings,
+*RS> right_scripts_cookbook::MIGRATE_RAILS_APP,
+*RS> right_scripts_cookbook::Write_XXXX_version_file,
+*RS> right_scripts_cookbook::XXXX___Install_East_Asian_Font_Support,
+*RS> right_scripts_cookbook::WEB_apache_base_install_v6,
+*RS> right_scripts_cookbook::Install_passenger,
+*RS> right_scripts_cookbook::XXXXOne_AIO_httpd_config,
+*RS> right_scripts_cookbook::XXXX_WEB_install_root_certificate, redis::default,
+*RS> right_scripts_cookbook::XXXX_Apply_XXXXID_Production_Cert_v1,
+*RS> right_scripts_cookbook::Set_platform_background_services,
+*RS> right_scripts_cookbook::XXXX__XXXX__Rails_VHost_Config_v1,
+*RS> right_scripts_cookbook::Configure_Passenger_settings,
+*RS> right_scripts_cookbook::XXXX_lock_apache_for_testing,
+*RS> right_scripts_cookbook::XXXX___Write_commission_junction_key_v1,
+*RS> right_scripts_cookbook::XXXX_SYS_memcached_server_install_v4,
+*RS> right_scripts_cookbook::SYS_Monitoring_install___11H1,
+*RS> right_scripts_cookbook::SYS_Monitoring_Apache_Add_v1,
+*RS> right_scripts_cookbook::Install_Newrelic_server_monitor,
+*RS> right_scripts_cookbook::XXXX_monit_configuration,
+*RS> right_scripts_cookbook::XXXX_DNS_dnsmadeeasy_external_id_register_v3,
+*RS> right_scripts_cookbook::XXXX_update_SSL_Cert_Auth_Bundle_via_GIT,
+*RS> right_scripts_cookbook::Connect_to_ELB___11H1
+*RS> Starting at Wed Oct 16 14:53:47 +0000 2013
+14:53:51: Setting the run_list to ["right_scripts_cookbook::SYS_Timezone_set_v1", "right_scripts_cookbook::MAIL_Postfix_Local_Delivery_v1", "right_scripts_cookbook::XXXX_SSHD_Verbose_Logging", "right_scripts_cookbook::XXXX_Apply_CentOS_Security_Updates", "right_scripts_cookbook::XXXX_XXXX_Install_Ruby_1_9_3_v1", "right_scripts_cookbook::XXXX_Install_Python_2_6", "right_scripts_cookbook::MISC_ssh_priv_key_install_v2", "right_scripts_cookbook::XXXX_SYS_RAILS_ENV___XXX_config_into_system_profile_v1", "right_scripts_cookbook::XXXX_XXXX_Ops_UTIL_install_script", "right_scripts_cookbook::XXXXOne_SYS_Syslog_Remote_Logging_Client", "right_scripts_cookbook::DB_MySQL_gem_install_v4", "right_scripts_cookbook::XXXX_Install_libxml", "right_scripts_cookbook::XXXX_Ruby_custom_gem_install_v5", "right_scripts_cookbook::AIO_GIT_PULL_TARBALL", "right_scripts_cookbook::restructure_platform_directory", "right_scripts_cookbook::Link_latest_release_to_current", "right_scripts_cookbook::set_XXX_gem_credentials", "right_scripts_cookbook::Bundle_install_multi_app", "right_scripts_cookbook::Configure_application_settings", "right_scripts_cookbook::MIGRATE_RAILS_APP", "right_scripts_cookbook::Write_XXXX_version_file", "right_scripts_cookbook::XXXX___Install_East_Asian_Font_Support", "right_scripts_cookbook::WEB_apache_base_install_v6", "right_scripts_cookbook::Install_passenger", "right_scripts_cookbook::XXXXOne_AIO_httpd_config", "right_scripts_cookbook::XXXX_WEB_install_root_certificate", "redis::default", "right_scripts_cookbook::XXXX_Apply_XXXXID_Production_Cert_v1", "right_scripts_cookbook::Set_platform_background_services", "right_scripts_cookbook::XXXX__XXXX__Rails_VHost_Config_v1", "right_scripts_cookbook::Configure_Passenger_settings", "right_scripts_cookbook::XXXX_lock_apache_for_testing", "right_scripts_cookbook::XXXX___Write_commission_junction_key_v1", "right_scripts_cookbook::XXXX_SYS_memcached_server_install_v4", "right_scripts_cookbook::SYS_Monitoring_install___11H1", "right_scripts_cookbook::SYS_Monitoring_Apache_Add_v1", "right_scripts_cookbook::Install_Newrelic_server_monitor", "right_scripts_cookbook::XXXX_monit_configuration", "right_scripts_cookbook::XXXX_DNS_dnsmadeeasy_external_id_register_v3", "right_scripts_cookbook::XXXX_update_SSL_Cert_Auth_Bundle_via_GIT", "right_scripts_cookbook::Connect_to_ELB___11H1"] from JSON
+14:53:51: Starting Chef Run (Version 0.9.14.4)
+********************************************************************************
+*RS>                   RightScript: 'SYS Timezone set v1'                   ****
+14:53:51: + test '' = true
++ '[' US/Eastern = localtime ']'
++ tzset=US/Eastern
++ ln -sf /usr/share/zoneinfo/US/Eastern /etc/localtime
+14:53:52: + echo 'Timezone set to US/Eastern'
++ logger -t RightScale 'Timezone set to US/Eastern'
+10:53:52: Timezone set to US/Eastern
+10:53:52: + exit 0
+10:53:52: Script exit status: 0
+10:53:52: Script duration: 0.951813
+********************************************************************************
+*RS>             RightScript: 'MAIL Postfix Local Delivery v1'              ****
+10:53:52: + postfix_file=/etc/postfix/main.cf
++ sed -i 's/inet_interfaces = localhost/#inet_interfaces = localhost/' /etc/postfix/main.cf
+10:53:52: + sed -i 's/#inet_interfaces = all/inet_interfaces = all/' /etc/postfix/main.cf
++ sed -i 's/mydestination = $myhostname\, localhost\.$mydomain\, localhost/mydestination = $myhostname, localhost\.$mydomain\, localhost\, ip-10-154-151-92.ec2.internal/' /etc/postfix/main.cf
++ service postfix restart
+10:53:52: Shutting down postfix:
+10:53:54: [
+10:53:54: FAILED
+10:53:54: ]
+10:53:54: Starting postfix:
+10:53:55: [  OK  ]
+10:53:55: Script exit status: 0
+10:53:55: Script duration: 2.981882
+********************************************************************************
+*RS>                RightScript: 'XXXX SSHD Verbose Logging'                ****
+10:53:55: Stopping sshd:
+10:53:56: [
+10:53:56: OK
+10:53:56: ]
+10:53:56: Starting sshd:
+10:53:56: [
+10:53:56: OK
+10:53:56: ]
+10:53:56: Script exit status: 0
+10:53:56: Script duration: 1.083993
+********************************************************************************
+*RS>           RightScript: 'XXXX Apply CentOS Security Updates'            ****
+10:53:57: repo files are ["CentOS-extras.repo", "RightScale-epel.repo", "CentOS-Base.repo", "Epel.repo", "CentOS-Debuginfo.repo", "CentOS-updates.repo", "CentOS-centosplus.repo", "CentOS-Media.repo", "CentOS-Vault.repo", "CentOS-addons.repo"]
+The following list will be renamed to include .base at the end ["CentOS-extras.repo", "RightScale-epel.repo", "CentOS-Base.repo", "Epel.repo", "CentOS-Debuginfo.repo", "CentOS-updates.repo", "CentOS-centosplus.repo", "CentOS-Media.repo", "CentOS-Vault.repo", "CentOS-addons.repo"]
+running command yum update -y --skip-broken --exclude=kernel*
+10:53:57: running command yum update -y --skip-broken --exclude=kernel*
+10:53:57: running command yum update -y --skip-broken --exclude=kernel*
+10:53:59: running command yum update -y --skip-broken --exclude=kernel*
+10:54:01: running command yum update -y --skip-broken --exclude=kernel*
+10:54:03: running command yum update -y --skip-broken --exclude=kernel*
+10:54:06: running command yum update -y --skip-broken --exclude=kernel*
+10:54:08: running command yum update -y --skip-broken --exclude=kernel*
+10:54:10: running command yum update -y --skip-broken --exclude=kernel*
+10:54:12: running command yum update -y --skip-broken --exclude=kernel*
+10:54:15: Script exit status: 0
+10:54:15: Script duration: 18.904049
+********************************************************************************
+*RS>             RightScript: 'XXXX XXXX Install Ruby 1.9.3 v1'              ****
+10:54:16: Loaded plugins: fastestmirror
+10:54:16: Setting up Remove Process
+10:54:16: No Match for argument: ruby-ri
+10:54:16: Loading mirror speeds from cached hostfile
+10:54:16: * addons: ec2-us-east-mirror3.rightscale.com
+10:54:16: * base: ec2-us-east-mirror3.rightscale.com
+10:54:16: * centosplus: ec2-us-east-mirror3.rightscale.com
+10:54:16: * epel: ec2-us-east-mirror3.rightscale.com
+10:54:16: * extras: ec2-us-east-mirror3.rightscale.com
+10:54:16: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+10:54:16: * updates: ec2-us-east-mirror3.rightscale.com
+10:54:16: Package(s) ruby-ri available, but not installed.
+10:54:16: No Match for argument: ruby-tcltk
+10:54:16: Package(s) ruby-tcltk available, but not installed.
+10:54:16: No Match for argument: rrdtool-ruby
+10:54:17: Package(s) rrdtool-ruby available, but not installed.
+10:54:17: Resolving Dependencies
+10:54:17: --> Running transaction check
+10:54:17: ---> Package ruby.x86_64 0:1.9.3p125-2 set to be erased
+10:54:17: --> Finished Dependency Resolution
+10:54:17: Dependencies Resolved
+10:54:17: ================================================================================
+ Package       Arch            Version                 Repository          Size
+================================================================================
+Removing:
+ ruby          x86_64          1.9.3p125-2             installed           20 M
+
+Transaction Summary
+================================================================================
+Remove        1 Package(s)
+Reinstall     0 Package(s)
+Downgrade     0 Package(s)
+10:54:17: Downloading Packages:
+10:54:17: Running rpm_check_debug
+10:54:18: Running Transaction Test
+10:54:19: Finished Transaction Test
+10:54:19: Transaction Test Succeeded
+10:54:19: Running Transaction
+10:54:22: Erasing        : ruby                                                     1/1
+10:54:23: Removed:
+  ruby.x86_64 0:1.9.3p125-2
+10:54:23: Complete!
+10:54:23: Loaded plugins: fastestmirror
+10:54:23: Loading mirror speeds from cached hostfile
+10:54:23: * addons: ec2-us-east-mirror3.rightscale.com
+10:54:23: * base: ec2-us-east-mirror3.rightscale.com
+10:54:23: * centosplus: ec2-us-east-mirror3.rightscale.com
+10:54:23: * epel: ec2-us-east-mirror3.rightscale.com
+10:54:23: * extras: ec2-us-east-mirror3.rightscale.com
+10:54:23: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+10:54:23: * updates: ec2-us-east-mirror3.rightscale.com
+10:54:23: Setting up Install Process
+10:54:25: Package libyaml-0.1.2-3.el5.x86_64 already installed and latest version
+10:54:25: Package readline-devel-5.1-3.el5.x86_64 already installed and latest version
+10:54:25: Package readline-devel-5.1-3.el5.i386 already installed and latest version
+10:54:26: Package mysql-devel is obsoleted by MySQL-devel-community, trying to install MySQL-devel-community-5.1.55-1.rhel5.x86_64 instead
+10:54:26: Package MySQL-devel-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+10:54:26: Package mysql-devel is obsoleted by MySQL-devel-community, trying to install MySQL-devel-community-5.1.55-1.rhel5.x86_64 instead
+10:54:26: Package MySQL-devel-community-5.1.55-1.rhel5.x86_64 already installed and latest version
+10:54:26: Nothing to do
+10:54:26: Preparing...
+10:54:26: ##################################################
+10:54:26: ruby
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:26: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:27: #
+10:54:28: #
+10:54:28: #
+10:54:28: #
+10:54:28: #
+10:54:28: #
+10:54:28: #
+10:54:28: #
+10:54:29: #
+10:54:29: #
+10:54:29: #
+10:54:29: #
+10:54:29: #
+10:54:33: http://rubygems.org added to sources
+10:54:33: Script exit status: 0
+10:54:33: Script duration: 18.311733
+********************************************************************************
+*RS>                 RightScript: 'XXXX Install Python 2.6'                 ****
+10:54:34: Loaded plugins: fastestmirror
+10:54:34: Loading mirror speeds from cached hostfile
+10:54:34: * addons: ec2-us-east-mirror3.rightscale.com
+10:54:34: * base: ec2-us-east-mirror3.rightscale.com
+10:54:34: * centosplus: ec2-us-east-mirror3.rightscale.com
+10:54:34: * epel: ec2-us-east-mirror3.rightscale.com
+10:54:34: * extras: ec2-us-east-mirror3.rightscale.com
+10:54:34: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+10:54:34: * updates: ec2-us-east-mirror3.rightscale.com
+10:54:34: Setting up Install Process
+10:54:36: Package python26-2.6.8-2.el5.x86_64 already installed and latest version
+10:54:36: Nothing to do
+10:54:36: Script exit status: 0
+10:54:36: Script duration: 3.041899
+********************************************************************************
+*RS>              RightScript: 'MISC ssh priv key install v2'               ****
+10:54:37: CONFIGURING: modifying ssh config file
+10:54:37: Script exit status: 0
+10:54:37: Script duration: 0.814316
+********************************************************************************
+*RS> RightScript: 'XXXX SYS RAILS_ENV & XXX config into system profile v1'  ****
+10:54:38: Script exit status: 0
+10:54:38: Script duration: 0.832123
+********************************************************************************
+*RS>           RightScript: 'XXXX XXXX Ops UTIL install script'           ****
+10:54:38: running command git clone git@github.com:XXXX/XXXX_Ops.git /opt/XXXX
+10:54:39: Warning: Permanently added 'github.com' (RSA) to the list of known hosts.
+10:54:40: running command cd /opt/XXXX
+running command git checkout myXXXXone.4
+10:54:40: Note: checking out 'myXXXXone.4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b new_branch_name
+10:54:40: HEAD is now at 6c05cea... Upddated vhost for XXXX and myXXXXone to accomodate ssl connections
+10:54:40: Finished git clone and checkout
+10:54:40: Finished deleting .git
+10:54:40: Script exit status: 0
+10:54:40: Script duration: 2.77581
+********************************************************************************
+*RS>        RightScript: 'XXXXOne SYS Syslog Remote Logging Client'         ****
+10:54:41: Stopping syslog-ng:
+10:54:41: [
+10:54:41: OK
+10:54:41: ]
+10:54:41: Starting syslog-ng:
+10:54:41: [
+10:54:41: OK
+10:54:41: ]
+10:54:41: Script exit status: 0
+10:54:41: Script duration: 1.065375
+********************************************************************************
+*RS>                 RightScript: 'DB MySQL gem install v4'                 ****
+10:54:42: ERROR:  While executing gem ... (RuntimeError)
+    Unknown command quickinstall
+10:54:42: Script exit status: 0
+10:54:42: Script duration: 0.937308
+********************************************************************************
+*RS>                  RightScript: 'XXXX Install libxml'                  ****
+10:54:43: ++ rpm -qa
+10:54:43: ++ grep libxml
+10:54:44: + libxml_version='libxml2-2.6.26-2.1.21.el5_9.2
+libxml2-python-2.6.26-2.1.21.el5_9.2
+libxml2-devel-2.6.26-2.1.21.el5_9.2
+10:54:44: libxml2-2.6.26-2.1.21.el5_9.2'
+10:54:44: ++ echo libxml2-2.6.26-2.1.21.el5_9.2 libxml2-python-2.6.26-2.1.21.el5_9.2 libxml2-devel-2.6.26-2.1.21.el5_9.2 libxml2-2.6.26-2.1.21.el5_9.2
+10:54:44: ++ grep -ci 2.7.3
+10:54:44: + libxml_match=0
+10:54:44: + test '' = true
+10:54:44: + '[' 0 -gt 0 ']'
+10:54:44: + rpm -qa --queryformat '%{name}.%{arch}\n'
+10:54:44: + grep libxml
+10:54:44: + xargs '-I{}' rpm -ev --nodeps '{}'
+10:54:46: + cd /var/cache/rightscale/right_scripts_content/rs_attach23457822568520
+10:54:46: + ls
+10:54:46: + grep libxml
+10:54:46: + xargs '-I{}' rpm --nodeps -ivh '{}'
+10:54:46: warning:
+10:54:46: libxml2-2.7.3-1.x86_64.rpm: Header V3 DSA signature: NOKEY, key ID de95bc1f
+10:54:46: Preparing...
+10:54:46: ##################################################
+10:54:46: libxml2
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: #
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: #
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: #
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: #
+10:54:46: ##
+10:54:46: #
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: ##
+10:54:46: #
+10:54:46: warning:
+10:54:46: libxml2-devel-2.7.3-1.x86_64.rpm: Header V3 DSA signature: NOKEY, key ID de95bc1f
+10:54:46: Preparing...
+10:54:46: ##################################################
+10:54:46: libxml2-devel
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: #
+10:54:46: warning:
+10:54:46: libxml2-python-2.7.3-1.x86_64.rpm: Header V3 DSA signature: NOKEY, key ID de95bc1f
+10:54:46: Preparing...
+10:54:46: ##################################################
+10:54:46: libxml2-python              ########################################
+10:54:46: #
+10:54:46: ##
+10:54:46: #
+10:54:46: ##
+10:54:46: #
+10:54:46: ##
+10:54:46: #
+10:54:47: Script exit status: 0
+10:54:47: Script duration: 4.102633
+********************************************************************************
+*RS>             RightScript: 'XXXX Ruby custom gem install v5'             ****
+10:54:50: Building native extensions.  This could take a while...
+10:54:51: Successfully installed god-0.13.3
+1 gem installed
+10:54:56: Successfully installed bundler-1.3.2
+1 gem installed
+10:54:56: Script exit status: 0
+10:54:56: Script duration: 9.331351
+********************************************************************************
+*RS>                  RightScript: 'AIO GIT PULL TARBALL'                   ****
+10:54:57: downloading na_XXXX_one tarball at version 2.0.0.174m
+running command curl -Lk --user '<hidden credential>:<hidden credential>' https://github.com/XXXX/na_XXXX_one/tarball/2.0.0.174m > /tmp/na_XXXX_one_2.0.0.174m.tar
+10:54:57: %
+10:54:57: T
+10:54:57: o
+10:54:57: t
+10:54:57: a
+10:54:57: l
+10:54:57: %
+10:54:57: R
+10:54:57: e
+10:54:57: c
+10:54:57: e
+10:54:57: i
+10:54:57: v
+10:54:57: e
+10:54:57: d
+10:54:57: %
+10:54:57: X
+10:54:57: f
+10:54:57: e
+10:54:57: r
+10:54:57: d
+10:54:57: A
+10:54:57: v
+10:54:57: e
+10:54:57: r
+10:54:57: a
+10:54:57: g
+10:54:57: e
+10:54:57: S
+10:54:57: p
+10:54:57: e
+10:54:57: e
+10:54:57: d
+10:54:57: T
+10:54:57: i
+10:54:57: m
+10:54:57: e
+10:54:57: T
+10:54:57: i
+10:54:57: m
+10:54:57: e
+10:54:57: T
+10:54:57: i
+10:54:57: m
+10:54:57: e
+10:54:57: C
+10:54:57: u
+10:54:57: r
+10:54:57: r
+10:54:57: e
+10:54:57: n
+10:54:57: t
+10:54:57: D
+10:54:57: l
+10:54:57: o
+10:54:57: a
+10:54:57: d
+10:54:57: U
+10:54:57: p
+10:54:57: l
+10:54:57: o
+10:54:57: a
+10:54:57: d
+10:54:57: T
+10:54:57: o
+10:54:57: t
+10:54:57: a
+10:54:57: l
+10:54:57: S
+10:54:57: p
+10:54:57: e
+10:54:57: n
+10:54:57: t
+10:54:57: L
+10:54:57: e
+10:54:57: f
+10:54:57: t
+10:54:57: S
+10:54:57: p
+10:54:57: e
+10:54:57: e
+10:54:57: d
+10:54:57: 1
+10:54:57: 0
+10:54:57: 0
+10:54:57: 1
+10:54:57: 9
+10:54:57: 4
+10:54:57: 1
+10:54:57: 0
+10:54:57: 0
+10:54:57: 1
+10:54:57: 9
+10:54:57: 4
+10:54:57: 0
+10:54:57: 0
+10:54:57: 1
+10:54:57: 0
+10:54:57: 4
+10:54:57: 5
+10:54:57: 0
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: 1
+10:54:57: 0
+10:54:57: 4
+10:54:57: 5
+10:54:57: 1
+10:54:57: 0
+10:54:57: 0
+10:54:57: 1
+10:54:57: 9
+10:54:57: 4
+10:54:57: 1
+10:54:57: 0
+10:54:57: 0
+10:54:57: 1
+10:54:57: 9
+10:54:57: 4
+10:54:57: 0
+10:54:57: 0
+10:54:57: 8
+10:54:57: 5
+10:54:57: 4
+10:54:57: 0
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: :
+10:54:57: -
+10:54:57: -
+10:54:57: 0
+10:54:58: 1
+10:54:58: 9
+10:54:58: 8
+10:54:58: 2
+10:54:58: 9
+10:54:58: 5
+10:54:58: k
+10:54:58: 1
+10:54:58: 9
+10:54:58: 1
+10:54:58: 5
+10:54:58: 9
+10:54:58: 8
+10:54:58: k
+10:54:58: 0
+10:54:58: 0
+10:54:58: 2
+10:54:58: 5
+10:54:58: 8
+10:54:58: 1
+10:54:58: k
+10:54:58: 0
+10:54:58: 0
+10:54:58: :
+10:54:58: 0
+10:54:58: 0
+10:54:58: :
+10:54:58: 0
+10:54:58: 3
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: 0
+10:54:58: :
+10:54:58: 0
+10:54:58: 0
+10:54:58: :
+10:54:58: 0
+10:54:58: 3
+10:54:58: 2
+10:54:58: 5
+10:54:58: 8
+10:54:58: 1
+10:54:58: k
+10:54:58: 1
+10:54:58: 0
+10:54:58: 0
+10:54:58: 8
+10:54:58: 2
+10:54:58: 9
+10:54:58: 5
+10:54:58: k
+10:54:58: 1
+10:54:58: 0
+10:54:58: 0
+10:54:58: 8
+10:54:58: 2
+10:54:58: 9
+10:54:58: 5
+10:54:58: k
+10:54:58: 0
+10:54:58: 0
+10:54:58: 1
+10:54:58: 0
+10:54:58: .
+10:54:58: 3
+10:54:58: M
+10:54:58: 0
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: :
+10:54:58: -
+10:54:58: -
+10:54:58: 4
+10:54:58: 0
+10:54:58: .
+10:54:58: 8
+10:54:58: M
+10:54:58: extracting tarball to /home/rails/na_XXXX_one/releases
+running command tar xf na_XXXX_one_2.0.0.174m.tar -C /home/rails/na_XXXX_one/releases
+10:54:58: mv /home/rails/na_XXXX_one/releases/XXXX-na_XXXX_one-691e25b76b58f0fb8de9f9a0976c8efb24e63f0c /home/rails/na_XXXX_one/releases/20131016145457
+10:54:58: renaming and moving extracted directory to /home/rails/na_XXXX_one/releases/20131016145457
+writing version file to /home/rails/na_XXXX_one/releases/20131016145457
+downloading myXXXXone_na tarball at version ms1.2.0.0.174m
+running command curl -Lk --user '<hidden credential>:<hidden credential>' https://github.com/XXXX/myXXXXone_na/tarball/ms1.2.0.0.174m > /tmp/myXXXXone_na_ms1.2.0.0.174m.tar
+10:54:59: %
+10:54:59: T
+10:54:59: o
+10:54:59: t
+10:54:59: a
+10:54:59: l
+10:54:59: %
+10:54:59: R
+10:54:59: e
+10:54:59: c
+10:54:59: e
+10:54:59: i
+10:54:59: v
+10:54:59: e
+10:54:59: d
+10:54:59: %
+10:54:59: X
+10:54:59: f
+10:54:59: e
+10:54:59: r
+10:54:59: d
+10:54:59: A
+10:54:59: v
+10:54:59: e
+10:54:59: r
+10:54:59: a
+10:54:59: g
+10:54:59: e
+10:54:59: S
+10:54:59: p
+10:54:59: e
+10:54:59: e
+10:54:59: d
+10:54:59: T
+10:54:59: i
+10:54:59: m
+10:54:59: e
+10:54:59: T
+10:54:59: i
+10:54:59: m
+10:54:59: e
+10:54:59: T
+10:54:59: i
+10:54:59: m
+10:54:59: e
+10:54:59: C
+10:54:59: u
+10:54:59: r
+10:54:59: r
+10:54:59: e
+10:54:59: n
+10:54:59: t
+10:54:59: D
+10:54:59: l
+10:54:59: o
+10:54:59: a
+10:54:59: d
+10:54:59: U
+10:54:59: p
+10:54:59: l
+10:54:59: o
+10:54:59: a
+10:54:59: d
+10:54:59: T
+10:54:59: o
+10:54:59: t
+10:54:59: a
+10:54:59: l
+10:54:59: S
+10:54:59: p
+10:54:59: e
+10:54:59: n
+10:54:59: t
+10:54:59: L
+10:54:59: e
+10:54:59: f
+10:54:59: t
+10:54:59: S
+10:54:59: p
+10:54:59: e
+10:54:59: e
+10:54:59: d
+10:54:59: 1
+10:54:59: 0
+10:54:59: 0
+10:54:59: 1
+10:54:59: 9
+10:54:59: 9
+10:54:59: 1
+10:54:59: 0
+10:54:59: 0
+10:54:59: 1
+10:54:59: 9
+10:54:59: 9
+10:54:59: 0
+10:54:59: 0
+10:54:59: 9
+10:54:59: 3
+10:54:59: 3
+10:54:59: 0
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: 9
+10:54:59: 3
+10:54:59: 3
+10:54:59: 1
+10:54:59: 0
+10:54:59: 0
+10:54:59: 1
+10:54:59: 9
+10:54:59: 9
+10:54:59: 1
+10:54:59: 0
+10:54:59: 0
+10:54:59: 1
+10:54:59: 9
+10:54:59: 9
+10:54:59: 0
+10:54:59: 0
+10:54:59: 8
+10:54:59: 0
+10:54:59: 0
+10:54:59: 0
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: 0
+10:54:59: 1
+10:54:59: 0
+10:54:59: 0
+10:54:59: 1
+10:54:59: 1
+10:54:59: .
+10:54:59: 6
+10:54:59: M
+10:54:59: 1
+10:54:59: 0
+10:54:59: 0
+10:54:59: 1
+10:54:59: 1
+10:54:59: .
+10:54:59: 6
+10:54:59: M
+10:54:59: 0
+10:54:59: 0
+10:54:59: 1
+10:54:59: 2
+10:54:59: .
+10:54:59: 7
+10:54:59: M
+10:54:59: 0
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: :
+10:54:59: -
+10:54:59: -
+10:54:59: 1
+10:54:59: 2
+10:54:59: .
+10:54:59: 7
+10:54:59: M
+10:54:59: extracting tarball to /home/rails/myXXXXone_na/releases
+running command tar xf myXXXXone_na_ms1.2.0.0.174m.tar -C /home/rails/myXXXXone_na/releases
+10:55:00: mv /home/rails/myXXXXone_na/releases/XXXX-myXXXXone_na-721453e29bad307a5e45f0f61adc0f7073c7b9d6 /home/rails/myXXXXone_na/releases/20131016145458
+10:55:00: renaming and moving extracted directory to /home/rails/myXXXXone_na/releases/20131016145458
+writing version file to /home/rails/myXXXXone_na/releases/20131016145458
+10:55:00: Script exit status: 0
+10:55:00: Script duration: 3.991093
+********************************************************************************
+*RS>             RightScript: 'restructure platform directory'              ****
+10:55:01: files inside of repository are ["XXXXone_na", "XXXXone_api", "XXXXone_na_automation", "XXXX_one_host", "XXXXone_data_import", "XXXX_one_project_management", "XXXX_one_bank_integration", "XXXX_one_token_access", "XXXX_one_fuji_adapter", "XXXX_one_collaboration", "XXXX_one_attachments", "XXXX_one_pdf_server", "XXXX_one_ui_components", "XXXXone_mesXXXXs_automation", "na_XXXX_one.gemspec", "XXXX_one_online_payment", "LICENSE", "README.rdoc", "Gemfile", "Gemfile.lock", "XXXXone_us", "XXXXone_project_management_automation", "VERSION_2.0.0.174m", "PR_ProductionDeploymentChecklist.txt", "XXXX_one_guides", "XXXX_one_yodlee", "XXXX_one_user_settings", "XXXX_one_test", "config.yml", "Rakefile", "lib", "XXXX_one_utilities", "XXXX_one_helpers", "Fudgefile", "XXXX_one_mesXXXXs"]
+moving XXXXone_na
+moving XXXXone_api
+moving XXXXone_na_automation
+moving XXXX_one_host
+moving XXXXone_data_import
+moving XXXX_one_project_management
+moving XXXX_one_bank_integration
+moving XXXX_one_token_access
+moving XXXX_one_fuji_adapter
+moving XXXX_one_collaboration
+moving XXXX_one_attachments
+moving XXXX_one_pdf_server
+moving XXXX_one_ui_components
+moving XXXXone_mesXXXXs_automation
+moving na_XXXX_one.gemspec
+moving XXXX_one_online_payment
+moving LICENSE
+moving README.rdoc
+moving Gemfile
+moving Gemfile.lock
+moving XXXXone_us
+moving XXXXone_project_management_automation
+moving VERSION_2.0.0.174m
+moving PR_ProductionDeploymentChecklist.txt
+moving XXXX_one_guides
+moving XXXX_one_yodlee
+moving XXXX_one_user_settings
+moving XXXX_one_test
+moving config.yml
+moving Rakefile
+moving lib
+moving XXXX_one_utilities
+moving XXXX_one_helpers
+moving Fudgefile
+moving XXXX_one_mesXXXXs
+replacing gempaths with to reflect new location
+gemfiles are ["Gemfile", "Gemfile.lock"]
+rewriting Gemfile
+rewriting Gemfile.lock
+files inside of repository are ["dev_keys", "deployment_client.rb", "README.rdoc", "Gemfile", "Gemfile.lock", "PR_ProductionDeploymentChecklist.txt", "host_app", "config.yml", "VERSION_ms1.2.0.0.174m", "XXXXid", "myXXXXone_na", "Fudgefile", "XXXX_one_commission_junction"]
+moving dev_keys
+moving deployment_client.rb
+moving README.rdoc
+moving Gemfile
+moving Gemfile.lock
+moving PR_ProductionDeploymentChecklist.txt
+moving host_app
+moving config.yml
+moving VERSION_ms1.2.0.0.174m
+moving XXXXid
+moving myXXXXone_na
+moving Fudgefile
+moving XXXX_one_commission_junction
+replacing gempaths with to reflect new location
+gemfiles are ["Gemfile", "Gemfile.lock"]
+rewriting Gemfile
+rewriting Gemfile.lock
+10:55:01: Script exit status: 0
+10:55:01: Script duration: 0.898844
+********************************************************************************
+*RS>             RightScript: 'Link latest release to current'              ****
+10:55:02: Script exit status: 0
+10:55:02: Script duration: 0.945664
+********************************************************************************
+*RS>                 RightScript: 'set XXX gem credentials'                 ****
+10:55:03: Script exit status: 0
+10:55:03: Script duration: 0.992106
+********************************************************************************
+*RS>                RightScript: 'Bundle install multi-app'                 ****
+10:55:03: performing bundle install for na_XXXX_one
+running command rm -f /usr/bin/python
+10:55:03: running command ln -s /usr/bin/python2.6 /usr/bin/python
+10:55:03: running command bundle install --deployment
+10:55:04: fatal: Not a git repository (or any of the parent directories): .git
+10:55:04: fatal: Not a git repository (or any of the parent directories): .git
+10:55:04: fatal: Not a git repository (or any of the parent directories): .git
+10:55:44: Checking out files:  19% (655/3279)
+10:55:44: Checking out files:  20% (656/3279)
+10:55:44: Checking out files:  21% (689/3279)
+10:55:44: Checking out files:  22% (722/3279)
+10:55:44: Checking out files:  23% (755/3279)
+10:55:44: Checking out files:  24% (787/3279)
+10:55:44: Checking out files:  25% (820/3279)
+10:55:44: Checking out files:  26% (853/3279)
+10:55:44: Checking out files:  27% (886/3279)
+10:55:44: Checking out files:  28% (919/3279)
+10:55:44: Checking out files:  29% (951/3279)
+10:55:44: Checking out files:  30% (984/3279)
+10:55:44: Checking out files:  31% (1017/3279)
+10:55:44: Checking out files:  32% (1050/3279)
+10:55:44: Checking out files:  33% (1083/3279)
+10:55:44: Checking out files:  34% (1115/3279)
+10:55:44: Checking out files:  35% (1148/3279)
+10:55:44: Checking out files:  36% (1181/3279)
+10:55:44: Checking out files:  37% (1214/3279)
+10:55:44: Checking out files:  38% (1247/3279)
+10:55:44: Checking out files:  39% (1279/3279)
+10:55:44: Checking out files:  40% (1312/3279)
+10:55:44: Checking out files:  41% (1345/3279)
+10:55:44: Checking out files:  42% (1378/3279)
+10:55:44: Checking out files:  43% (1410/3279)
+10:55:44: Checking out files:  44% (1443/3279)
+10:55:44: Checking out files:  45% (1476/3279)
+10:55:44: Checking out files:  46% (1509/3279)
+10:55:44: Checking out files:  47% (1542/3279)
+10:55:44: Checking out files:  48% (1574/3279)
+10:55:44: Checking out files:  49% (1607/3279)
+10:55:44: Checking out files:  50% (1640/3279)
+10:55:44: Checking out files:  51% (1673/3279)
+10:55:44: Checking out files:  52% (1706/3279)
+10:55:44: Checking out files:  53% (1738/3279)
+10:55:44: Checking out files:  54% (1771/3279)
+10:55:44: Checking out files:  55% (1804/3279)
+10:55:44: Checking out files:  56% (1837/3279)
+10:55:44: Checking out files:  57% (1870/3279)
+10:55:44: Checking out files:  58% (1902/3279)
+10:55:44: Checking out files:  59% (1935/3279)
+10:55:44: Checking out files:  60% (1968/3279)
+10:55:44: Checking out files:  61% (2001/3279)
+10:55:44: Checking out files:  62% (2033/3279)
+10:55:44: Checking out files:  63% (2066/3279)
+10:55:44: Checking out files:  64% (2099/3279)
+10:55:44: Checking out files:  65% (2132/3279)
+10:55:44: Checking out files:  66% (2165/3279)
+10:55:44: Checking out files:  67% (2197/3279)
+10:55:44: Checking out files:  68% (2230/3279)
+10:55:44: Checking out files:  69% (2263/3279)
+10:55:44: Checking out files:  70% (2296/3279)
+10:55:44: Checking out files:  71% (2329/3279)
+10:55:45: Checking out files:  72% (2361/3279)
+10:55:45: Checking out files:  72% (2379/3279)
+10:55:45: Checking out files:  73% (2394/3279)
+10:55:45: Checking out files:  74% (2427/3279)
+10:55:45: Checking out files:  75% (2460/3279)
+10:55:45: Checking out files:  76% (2493/3279)
+10:55:45: Checking out files:  77% (2525/3279)
+10:55:45: Checking out files:  78% (2558/3279)
+10:55:45: Checking out files:  79% (2591/3279)
+10:55:45: Checking out files:  80% (2624/3279)
+10:55:45: Checking out files:  81% (2656/3279)
+10:55:45: Checking out files:  82% (2689/3279)
+10:55:45: Checking out files:  83% (2722/3279)
+10:55:45: Checking out files:  84% (2755/3279)
+10:55:45: Checking out files:  85% (2788/3279)
+10:55:45: Checking out files:  86% (2820/3279)
+10:55:45: Checking out files:  87% (2853/3279)
+10:55:45: Checking out files:  88% (2886/3279)
+10:55:45: Checking out files:  89% (2919/3279)
+10:55:45: Checking out files:  90% (2952/3279)
+10:55:45: Checking out files:  91% (2984/3279)
+10:55:45: Checking out files:  92% (3017/3279)
+10:55:45: Checking out files:  93% (3050/3279)
+10:55:45: Checking out files:  94% (3083/3279)
+10:55:45: Checking out files:  95% (3116/3279)
+10:55:45: Checking out files:  96% (3148/3279)
+10:55:45: Checking out files:  97% (3181/3279)
+10:55:45: Checking out files:  98% (3214/3279)
+10:55:45: Checking out files:  99% (3247/3279)
+10:55:45: Checking out files: 100% (3279/3279)
+10:55:45: Checking out files: 100% (3279/3279), done.
+11:00:18: running command rm -f /usr/bin/python
+11:00:18: running command ln -s /usr/bin/python2.4 /usr/bin/python
+11:00:18: performing bundle install for myXXXXone_na
+running command rm -f /usr/bin/python
+11:00:18: running command ln -s /usr/bin/python2.6 /usr/bin/python
+11:00:18: running command bundle install --deployment
+11:01:01: Checking out files:  23% (763/3279)
+11:01:01: Checking out files:  24% (787/3279)
+11:01:01: Checking out files:  25% (820/3279)
+11:01:01: Checking out files:  26% (853/3279)
+11:01:01: Checking out files:  27% (886/3279)
+11:01:01: Checking out files:  28% (919/3279)
+11:01:01: Checking out files:  29% (951/3279)
+11:01:01: Checking out files:  30% (984/3279)
+11:01:01: Checking out files:  31% (1017/3279)
+11:01:01: Checking out files:  32% (1050/3279)
+11:01:01: Checking out files:  33% (1083/3279)
+11:01:01: Checking out files:  34% (1115/3279)
+11:01:01: Checking out files:  35% (1148/3279)
+11:01:01: Checking out files:  36% (1181/3279)
+11:01:01: Checking out files:  37% (1214/3279)
+11:01:01: Checking out files:  38% (1247/3279)
+11:01:01: Checking out files:  39% (1279/3279)
+11:01:01: Checking out files:  40% (1312/3279)
+11:01:01: Checking out files:  41% (1345/3279)
+11:01:01: Checking out files:  42% (1378/3279)
+11:01:01: Checking out files:  43% (1410/3279)
+11:01:01: Checking out files:  44% (1443/3279)
+11:01:01: Checking out files:  45% (1476/3279)
+11:01:01: Checking out files:  46% (1509/3279)
+11:01:01: Checking out files:  47% (1542/3279)
+11:01:01: Checking out files:  48% (1574/3279)
+11:01:01: Checking out files:  49% (1607/3279)
+11:01:01: Checking out files:  50% (1640/3279)
+11:01:01: Checking out files:  51% (1673/3279)
+11:01:01: Checking out files:  52% (1706/3279)
+11:01:01: Checking out files:  53% (1738/3279)
+11:01:01: Checking out files:  54% (1771/3279)
+11:01:01: Checking out files:  55% (1804/3279)
+11:01:01: Checking out files:  56% (1837/3279)
+11:01:01: Checking out files:  57% (1870/3279)
+11:01:01: Checking out files:  58% (1902/3279)
+11:01:01: Checking out files:  59% (1935/3279)
+11:01:01: Checking out files:  60% (1968/3279)
+11:01:01: Checking out files:  61% (2001/3279)
+11:01:01: Checking out files:  62% (2033/3279)
+11:01:01: Checking out files:  63% (2066/3279)
+11:01:01: Checking out files:  64% (2099/3279)
+11:01:01: Checking out files:  65% (2132/3279)
+11:01:01: Checking out files:  66% (2165/3279)
+11:01:01: Checking out files:  67% (2197/3279)
+11:01:01: Checking out files:  68% (2230/3279)
+11:01:02: Checking out files:  69% (2263/3279)
+11:01:02: Checking out files:  70% (2296/3279)
+11:01:02: Checking out files:  71% (2329/3279)
+11:01:02: Checking out files:  71% (2359/3279)
+11:01:02: Checking out files:  72% (2361/3279)
+11:01:02: Checking out files:  73% (2394/3279)
+11:01:02: Checking out files:  74% (2427/3279)
+11:01:02: Checking out files:  75% (2460/3279)
+11:01:02: Checking out files:  76% (2493/3279)
+11:01:02: Checking out files:  77% (2525/3279)
+11:01:02: Checking out files:  78% (2558/3279)
+11:01:02: Checking out files:  79% (2591/3279)
+11:01:02: Checking out files:  80% (2624/3279)
+11:01:02: Checking out files:  81% (2656/3279)
+11:01:02: Checking out files:  82% (2689/3279)
+11:01:02: Checking out files:  83% (2722/3279)
+11:01:02: Checking out files:  84% (2755/3279)
+11:01:02: Checking out files:  85% (2788/3279)
+11:01:02: Checking out files:  86% (2820/3279)
+11:01:02: Checking out files:  87% (2853/3279)
+11:01:02: Checking out files:  88% (2886/3279)
+11:01:02: Checking out files:  89% (2919/3279)
+11:01:02: Checking out files:  90% (2952/3279)
+11:01:02: Checking out files:  91% (2984/3279)
+11:01:02: Checking out files:  92% (3017/3279)
+11:01:02: Checking out files:  93% (3050/3279)
+11:01:02: Checking out files:  94% (3083/3279)
+11:01:02: Checking out files:  95% (3116/3279)
+11:01:02: Checking out files:  96% (3148/3279)
+11:01:02: Checking out files:  97% (3181/3279)
+11:01:02: Checking out files:  98% (3214/3279)
+11:01:02: Checking out files:  99% (3247/3279)
+11:01:02: Checking out files: 100% (3279/3279)
+11:01:02: Checking out files: 100% (3279/3279), done.
+11:05:33: running command rm -f /usr/bin/python
+11:05:33: running command ln -s /usr/bin/python2.4 /usr/bin/python
+11:05:33: Script exit status: 0
+11:05:33: Script duration: 630.295335
+********************************************************************************
+*RS>             RightScript: 'Configure application settings'              ****
+11:05:34: changing to /home/rails/na_XXXX_one/current/config directory
+configuring template for database.yml
+configuring database.yml.tmpl
+configuring template for myXXXXone_client.yml
+configuring myXXXXone_client.yml.tmpl
+configuring template for live_chat.yml
+configuring live_chat.yml.tmpl
+configuring template for amazon_s3.yml
+configuring amazon_s3.yml.tmpl
+configuring template for XXXX_yodlee_client.yml
+configuring XXXX_yodlee_client.yml.tmpl
+configuring template for yodlee.yml
+configuring yodlee.yml.tmpl
+configuring template for sidekiq.yml
+configuring sidekiq.yml.tmpl
+configuring template for newrelic.yml
+configuring newrelic.yml.tmpl
+configuring template for token_settings.yml
+configuring token_settings.yml.tmpl
+changing to /home/rails/na_XXXX_one/current/config/environments directory
+configuring template for staging.rb
+configuring staging.rb.tmpl
+configuring template for production.rb
+configuring production.rb.tmpl
+changing to /home/rails/na_XXXX_one/current/script directory
+configuring template for ["sidekiq_wrapper"]
+configuring sidekiq_wrapper.tmpl
+changing to /home/rails/myXXXXone_na/current/config directory
+configuring template for database.yml
+configuring database.yml.tmpl
+configuring template for myXXXXone_host.yml
+configuring myXXXXone_host.yml.tmpl
+configuring template for live_chat.yml
+configuring live_chat.yml.tmpl
+configuring template for cj_config.yml
+configuring cj_config.yml.tmpl
+configuring template for signin_reroute.yml
+configuring signin_reroute.yml.tmpl
+configuring template for zuora.yml
+configuring zuora.yml.tmpl
+configuring template for newrelic.yml
+configuring newrelic.yml.tmpl
+changing to /home/rails/myXXXXone_na/current/config/environments directory
+configuring template for staging.rb
+configuring staging.rb.tmpl
+configuring template for production.rb
+configuring production.rb.tmpl
+11:05:34: Script exit status: 0
+11:05:34: Script duration: 0.918644
+********************************************************************************
+*RS>                    RightScript: 'MIGRATE_RAILS_APP'                    ****
+11:05:35: logger: invalid option -- -
+11:05:35: uXXXX: logger [-is] [-f file] [-p pri] [-t tag] [-u socket] [ mesXXXX ... ]
+11:05:35: environment defined by application is staging
+environment defined after checking against allowed environments is staging
+performing db migration for na_XXXX_one in /home/rails/na_XXXX_one/current
+Running rake task db:migrate with staging environment
+11:05:35: fatal: Not a git repository (or any of the parent directories): .git
+11:05:35: fatal: Not a git repository (or any of the parent directories): .git
+11:05:35: fatal: Not a git repository (or any of the parent directories): .git
+11:05:36: fatal: Not a git repository (or any of the parent directories): .git
+11:05:36: fatal: Not a git repository (or any of the parent directories): .git
+11:05:36: fatal: Not a git repository (or any of the parent directories): .git
+11:07:15: environment defined by application is staging
+environment defined after checking against allowed environments is staging
+performing db migration for myXXXXone_na in /home/rails/myXXXXone_na/current
+Running rake task db:migrate with staging environment
+11:07:35: Script exit status: 0
+11:07:35: Script duration: 120.848543
+********************************************************************************
+*RS>               RightScript: 'Write XXXX version file'                ****
+11:07:36: Script exit status: 0
+11:07:36: Script duration: 0.91077
+********************************************************************************
+*RS>         RightScript: 'XXXX - Install East Asian Font Support'          ****
+11:07:37: + yum groupinstall 'Chinese Support' -y
+11:07:37: Loaded plugins: fastestmirror
+11:07:37: Loading mirror speeds from cached hostfile
+11:07:37: * addons: ec2-us-east-mirror3.rightscale.com
+11:07:37: * base: ec2-us-east-mirror3.rightscale.com
+11:07:37: * centosplus: ec2-us-east-mirror3.rightscale.com
+11:07:37: * epel: ec2-us-east-mirror3.rightscale.com
+11:07:37: * extras: ec2-us-east-mirror3.rightscale.com
+11:07:37: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+11:07:37: * updates: ec2-us-east-mirror3.rightscale.com
+11:07:37: Setting up Group Process
+11:07:37: Checking for new repos for mirrors
+11:07:39: Resolving Dependencies
+11:07:39: --> Running transaction check
+11:07:39: ---> Package Cluster_Administration-zh-CN.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package Cluster_Administration-zh-TW.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package Deployment_Guide-zh-CN.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package Deployment_Guide-zh-TW.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package Global_File_System-zh-CN.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package Global_File_System-zh-TW.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package Virtualization-zh-CN.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package Virtualization-zh-TW.noarch 0:5.8-1.el5.centos set to be updated
+11:07:39: ---> Package fonts-chinese.noarch 0:3.02-12.el5 set to be updated
+11:07:39: ---> Package lv.x86_64 0:4.51-8.1 set to be updated
+11:07:39: ---> Package stardict.x86_64 0:2.4.5-5 set to be updated
+11:07:39: --> Processing Dependency: scrollkeeper for package: stardict
+11:07:39: --> Running transaction check
+11:07:39: ---> Package scrollkeeper.x86_64 0:0.3.14-9.el5 set to be updated
+11:07:39: --> Processing Dependency: docbook-dtds for package: scrollkeeper
+11:07:39: --> Running transaction check
+11:07:39: ---> Package docbook-dtds.noarch 0:1.0-30.1 set to be updated
+11:07:39: --> Processing Dependency: openjade = 1.3.2 for package: docbook-dtds
+11:07:39: --> Processing Dependency: xml-common >= 0.6.3-8 for package: docbook-dtds
+11:07:39: --> Processing Dependency: sgml-common >= 0.6.3-4 for package: docbook-dtds
+11:07:39: --> Processing Dependency: xml-common for package: docbook-dtds
+11:07:39: --> Running transaction check
+11:07:39: ---> Package openjade.x86_64 0:1.3.2-27 set to be updated
+11:07:39: --> Processing Dependency: libosp.so.5()(64bit) for package: openjade
+11:07:39: ---> Package sgml-common.noarch 0:0.6.3-18 set to be updated
+11:07:39: ---> Package xml-common.noarch 0:0.6.3-18 set to be updated
+11:07:39: --> Running transaction check
+11:07:39: ---> Package opensp.x86_64 0:1.5.2-4 set to be updated
+11:07:41: --> Finished Dependency Resolution
+11:07:41: Dependencies Resolved
+11:07:41: ================================================================================
+ Package                         Arch      Version                Repository
+                                                                           Size
+================================================================================
+Installing:
+ Cluster_Administration-zh-CN    noarch    5.8-1.el5.centos       base    2.4 M
+ Cluster_Administration-zh-TW    noarch    5.8-1.el5.centos       base    2.4 M
+ Deployment_Guide-zh-CN          noarch    5.8-1.el5.centos       base    8.3 M
+ Deployment_Guide-zh-TW          noarch    5.8-1.el5.centos       base    8.3 M
+ Global_File_System-zh-CN        noarch    5.8-1.el5.centos       base    415 k
+ Global_File_System-zh-TW        noarch    5.8-1.el5.centos       base    416 k
+ Virtualization-zh-CN            noarch    5.8-1.el5.centos       base    6.9 M
+ Virtualization-zh-TW            noarch    5.8-1.el5.centos       base    6.9 M
+ fonts-chinese                   noarch    3.02-12.el5            base     24 M
+ lv                              x86_64    4.51-8.1               base    425 k
+ stardict                        x86_64    2.4.5-5                base    835 k
+Installing for dependencies:
+ docbook-dtds                    noarch    1.0-30.1               base    677 k
+ openjade                        x86_64    1.3.2-27               base    1.0 M
+ opensp                          x86_64    1.5.2-4                base    1.0 M
+ scrollkeeper                    x86_64    0.3.14-9.el5           base    296 k
+ sgml-common                     noarch    0.6.3-18               base     40 k
+ xml-common                      noarch    0.6.3-18               base    5.8 k
+
+Transaction Summary
+================================================================================
+Install      17 Package(s)
+Upgrade       0 Package(s)
+11:07:41: Total download size: 64 M
+11:07:41: Downloading Packages:
+11:07:42: --------------------------------------------------------------------------------
+11:07:42: Total                                            37 MB/s |  64 MB     00:01
+11:07:42: Running rpm_check_debug
+11:07:42: Running Transaction Test
+11:07:43: Finished Transaction Test
+11:07:43: Transaction Test Succeeded
+11:07:43: Running Transaction
+11:07:44: Installing     : sgml-common                                             1/17
+11:07:44: Installing     : opensp                                                  2/17
+11:07:45: Installing     : openjade                                                3/17
+11:07:45: Installing     : xml-common                                              4/17
+11:07:45: Installing     : lv                                                      5/17
+11:07:45: Installing     : docbook-dtds                                            6/17
+11:07:47: Installing     : scrollkeeper                                            7/17
+11:07:48: Installing     : Deployment_Guide-zh-CN                                  8/17
+11:07:49: Installing     : fonts-chinese                                           9/17
+11:07:53: Installing     : Deployment_Guide-zh-TW                                 10/17
+11:07:53: Installing     : Virtualization-zh-CN                                   11/17
+11:07:53: Installing     : Virtualization-zh-TW                                   12/17
+11:07:53: Installing     : Global_File_System-zh-TW                               13/17
+11:07:53: Installing     : Cluster_Administration-zh-TW                           14/17
+11:07:54: Installing     : stardict                                               15/17
+11:07:55: Installing     : Global_File_System-zh-CN                               16/17
+11:07:55: Installing     : Cluster_Administration-zh-CN                           17/17
+11:07:55: Installed:
+  Cluster_Administration-zh-CN.noarch 0:5.8-1.el5.centos
+  Cluster_Administration-zh-TW.noarch 0:5.8-1.el5.centos
+  Deployment_Guide-zh-CN.noarch 0:5.8-1.el5.centos
+  Deployment_Guide-zh-TW.noarch 0:5.8-1.el5.centos
+  Global_File_System-zh-CN.noarch 0:5.8-1.el5.centos
+  Global_File_System-zh-TW.noarch 0:5.8-1.el5.centos
+  Virtualization-zh-CN.noarch 0:5.8-1.el5.centos
+  Virtualization-zh-TW.noarch 0:5.8-1.el5.centos
+  fonts-chinese.noarch 0:3.02-12.el5
+  lv.x86_64 0:4.51-8.1
+  stardict.x86_64 0:2.4.5-5
+
+Dependency Installed:
+  docbook-dtds.noarch 0:1.0-30.1       openjade.x86_64 0:1.3.2-27
+  opensp.x86_64 0:1.5.2-4              scrollkeeper.x86_64 0:0.3.14-9.el5
+  sgml-common.noarch 0:0.6.3-18        xml-common.noarch 0:0.6.3-18
+11:07:55: Complete!
+11:07:55: + yum groupinstall 'Korean Support' -y
+11:07:55: Loaded plugins: fastestmirror
+11:07:55: Loading mirror speeds from cached hostfile
+11:07:55: * addons: ec2-us-east-mirror3.rightscale.com
+11:07:55: * base: ec2-us-east-mirror3.rightscale.com
+11:07:55: * centosplus: ec2-us-east-mirror3.rightscale.com
+11:07:55: * epel: ec2-us-east-mirror3.rightscale.com
+11:07:55: * extras: ec2-us-east-mirror3.rightscale.com
+11:07:55: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+11:07:55: * updates: ec2-us-east-mirror3.rightscale.com
+11:07:55: Setting up Group Process
+11:07:55: Checking for new repos for mirrors
+11:07:57: Package lv-4.51-8.1.x86_64 already installed and latest version
+11:07:57: Resolving Dependencies
+11:07:57: --> Running transaction check
+11:07:57: ---> Package Cluster_Administration-ko-KR.noarch 0:5.8-1.el5.centos set to be updated
+11:07:57: ---> Package Deployment_Guide-ko-KR.noarch 0:5.8-1.el5.centos set to be updated
+11:07:57: ---> Package Global_File_System-ko-KR.noarch 0:5.8-1.el5.centos set to be updated
+11:07:58: ---> Package Virtualization-ko-KR.noarch 0:5.8-1.el5.centos set to be updated
+11:07:58: ---> Package fonts-korean.noarch 0:1.0.11-10.el5 set to be updated
+11:07:58: ---> Package man-pages-ko.noarch 1:1.48-15.1.1 set to be updated
+11:07:59: --> Finished Dependency Resolution
+11:07:59: Dependencies Resolved
+11:07:59: ================================================================================
+ Package                         Arch      Version                Repository
+                                                                           Size
+================================================================================
+Installing:
+ Cluster_Administration-ko-KR    noarch    5.8-1.el5.centos       base    2.4 M
+ Deployment_Guide-ko-KR          noarch    5.8-1.el5.centos       base    8.3 M
+ Global_File_System-ko-KR        noarch    5.8-1.el5.centos       base    415 k
+ Virtualization-ko-KR            noarch    5.8-1.el5.centos       base    6.9 M
+ fonts-korean                    noarch    1.0.11-10.el5          base     19 M
+ man-pages-ko                    noarch    1:1.48-15.1.1          base    1.1 M
+
+Transaction Summary
+================================================================================
+Install       6 Package(s)
+Upgrade       0 Package(s)
+11:07:59: Total download size: 38 M
+11:07:59: Downloading Packages:
+11:08:00: --------------------------------------------------------------------------------
+11:08:00: Total                                            38 MB/s |  38 MB     00:00
+11:08:00: Running rpm_check_debug
+11:08:00: Running Transaction Test
+11:08:00: Finished Transaction Test
+11:08:00: Transaction Test Succeeded
+11:08:00: Running Transaction
+11:08:01: Installing     : fonts-korean                                             1/6
+11:08:05: Installing     : man-pages-ko                                             2/6
+11:08:05: Installing     : Cluster_Administration-ko-KR                             3/6
+11:08:05: Installing     : Deployment_Guide-ko-KR                                   4/6
+11:08:06: Installing     : Virtualization-ko-KR                                     5/6
+11:08:06: Installing     : Global_File_System-ko-KR                                 6/6
+11:08:06: Installed:
+  Cluster_Administration-ko-KR.noarch 0:5.8-1.el5.centos
+  Deployment_Guide-ko-KR.noarch 0:5.8-1.el5.centos
+  Global_File_System-ko-KR.noarch 0:5.8-1.el5.centos
+  Virtualization-ko-KR.noarch 0:5.8-1.el5.centos
+  fonts-korean.noarch 0:1.0.11-10.el5
+  man-pages-ko.noarch 1:1.48-15.1.1
+11:08:06: Complete!
+11:08:06: + yum groupinstall 'Japanese Support' -y
+11:08:07: Loaded plugins: fastestmirror
+11:08:07: Loading mirror speeds from cached hostfile
+11:08:07: * addons: ec2-us-east-mirror3.rightscale.com
+11:08:07: * base: ec2-us-east-mirror3.rightscale.com
+11:08:07: * centosplus: ec2-us-east-mirror3.rightscale.com
+11:08:07: * epel: ec2-us-east-mirror3.rightscale.com
+11:08:07: * extras: ec2-us-east-mirror3.rightscale.com
+11:08:07: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+11:08:07: * updates: ec2-us-east-mirror3.rightscale.com
+11:08:07: Setting up Group Process
+11:08:07: Checking for new repos for mirrors
+11:08:09: Package lv-4.51-8.1.x86_64 already installed and latest version
+11:08:09: Resolving Dependencies
+11:08:09: --> Running transaction check
+11:08:09: ---> Package Cluster_Administration-ja-JP.noarch 0:5.8-1.el5.centos set to be updated
+11:08:09: ---> Package Deployment_Guide-ja-JP.noarch 0:5.8-1.el5.centos set to be updated
+11:08:09: ---> Package Global_File_System-ja-JP.noarch 0:5.8-1.el5.centos set to be updated
+11:08:09: ---> Package Virtualization-ja-JP.noarch 0:5.8-1.el5.centos set to be updated
+11:08:09: ---> Package anthy.i386 0:7900-4.el5 set to be updated
+11:08:09: ---> Package anthy.x86_64 0:7900-4.el5 set to be updated
+11:08:09: ---> Package fonts-japanese.noarch 0:0.20061016-4.el5 set to be updated
+11:08:09: ---> Package kcc.x86_64 0:2.3-24.2.2 set to be updated
+11:08:09: ---> Package man-pages-ja.noarch 0:20060815-15.el5 set to be updated
+11:08:09: ---> Package nkf.x86_64 0:2.07-1.1.fc6 set to be updated
+11:08:09: ---> Package perl-NKF.x86_64 0:2.07-1.1.fc6 set to be updated
+11:08:10: --> Finished Dependency Resolution
+11:08:10: Dependencies Resolved
+11:08:10: ================================================================================
+ Package                         Arch      Version                Repository
+                                                                           Size
+================================================================================
+Installing:
+ Cluster_Administration-ja-JP    noarch    5.8-1.el5.centos       base    2.4 M
+ Deployment_Guide-ja-JP          noarch    5.8-1.el5.centos       base    8.3 M
+ Global_File_System-ja-JP        noarch    5.8-1.el5.centos       base    415 k
+ Virtualization-ja-JP            noarch    5.8-1.el5.centos       base    6.9 M
+ anthy                           i386      7900-4.el5             base    5.4 M
+ anthy                           x86_64    7900-4.el5             base    5.4 M
+ fonts-japanese                  noarch    0.20061016-4.el5       base     29 M
+ kcc                             x86_64    2.3-24.2.2             base     27 k
+ man-pages-ja                    noarch    20060815-15.el5        base    5.0 M
+ nkf                             x86_64    2.07-1.1.fc6           base    113 k
+ perl-NKF                        x86_64    2.07-1.1.fc6           base    121 k
+
+Transaction Summary
+================================================================================
+Install      11 Package(s)
+Upgrade       0 Package(s)
+11:08:10: Total download size: 63 M
+11:08:10: Downloading Packages:
+11:08:12: --------------------------------------------------------------------------------
+11:08:12: Total                                            34 MB/s |  63 MB     00:01
+11:08:12: Running rpm_check_debug
+11:08:12: Running Transaction Test
+11:08:13: Finished Transaction Test
+11:08:13: Transaction Test Succeeded
+11:08:13: Running Transaction
+11:08:13: Installing     : kcc                                                     1/11
+11:08:14: Installing     : Virtualization-ja-JP                                    2/11
+11:08:15: Installing     : man-pages-ja                                            3/11
+11:08:16: Installing     : fonts-japanese                                          4/11
+11:08:21: Installing     : Deployment_Guide-ja-JP                                  5/11
+11:08:21: Installing     : anthy                                                   6/11
+11:08:22: Installing     : anthy                                                   7/11
+11:08:22: Installing     : perl-NKF                                                8/11
+11:08:22: Installing     : nkf                                                     9/11
+11:08:22: Installing     : Global_File_System-ja-JP                               10/11
+11:08:22: Installing     : Cluster_Administration-ja-JP                           11/11
+11:08:22: Installed:
+  Cluster_Administration-ja-JP.noarch 0:5.8-1.el5.centos
+  Deployment_Guide-ja-JP.noarch 0:5.8-1.el5.centos
+  Global_File_System-ja-JP.noarch 0:5.8-1.el5.centos
+  Virtualization-ja-JP.noarch 0:5.8-1.el5.centos
+  anthy.i386 0:7900-4.el5
+  anthy.x86_64 0:7900-4.el5
+  fonts-japanese.noarch 0:0.20061016-4.el5
+  kcc.x86_64 0:2.3-24.2.2
+  man-pages-ja.noarch 0:20060815-15.el5
+  nkf.x86_64 0:2.07-1.1.fc6
+  perl-NKF.x86_64 0:2.07-1.1.fc6
+11:08:22: Complete!
+11:08:22: Script exit status: 0
+11:08:22: Script duration: 46.541272
+********************************************************************************
+*RS>               RightScript: 'WEB apache base install v6'                ****
+11:08:23: Stopping httpd:
+11:08:23: [
+11:08:23: FAILED
+11:08:23: ]
+11:08:23: Setting MPM to worker.
+11:08:23: Tune Apache server worker parameters for high traffic server...
+11:08:23: Starting httpd:
+11:08:24: [
+11:08:24: OK
+11:08:24: ]
+11:08:24: Script exit status: 0
+11:08:24: Script duration: 1.25352
+********************************************************************************
+*RS>                    RightScript: 'Install passenger'                    ****
+11:08:24: running command yum -y install curl-devel
+11:08:31: running command gem install passenger -v 3.0.17
+11:08:43: unable to convert "\xC3" to UTF-8 in conversion from ASCII-8BIT to UTF-8 to US-ASCII for README.rdoc, skipping
+11:08:54: unable to convert "\xC3" to UTF-8 in conversion from ASCII-8BIT to UTF-8 to US-ASCII for README.rdoc, skipping
+11:09:04: running command passenger-install-apache2-module -a
+11:09:07: rm -rf ext/common/libboost_oxt.a ext/common/libboost_oxt
+11:09:07: rm -rf ext/common/libpassenger_common.a ext/common/libpassenger_common
+11:09:07: rm -f agents/PassengerWatchdog agents/PassengerLoggingAgent
+11:09:07: rm -rf ext/apache2/module_libboost_oxt.a ext/apache2/module_libboost_oxt
+11:09:07: rm -rf ext/apache2/module_libpassenger_common.a ext/apache2/module_libpassenger_common
+11:09:07: rm -rf ext/apache2/Configuration.o ext/apache2/Bucket.o ext/apache2/Hooks.o ext/apache2/mod_passenger.o ext/apache2/mod_passenger.so agents/PassengerHelperAgent
+11:09:07: mkdir -p ext/apache2/module_libpassenger_common
+11:09:07: g++ -Iext -Iext/common -Iext/libev -fPIC -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -Wno-attributes -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -I/usr/include/apr-1 -I/usr/include/apr-1 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -fno-strict-aliasing -I/usr/include/httpd -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/apache2/module_libpassenger_common/aggregate.o -c ext/apache2/module_libpassenger_common/aggregate.cpp
+11:09:13: rm -rf ext/apache2/module_libpassenger_common.a
+11:09:13: ar cru ext/apache2/module_libpassenger_common.a ext/apache2/module_libpassenger_common/aggregate.o
+11:09:13: ranlib ext/apache2/module_libpassenger_common.a
+11:09:13: mkdir -p ext/apache2/module_libboost_oxt
+11:09:13: g++ -Iext -fPIC -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -Wno-attributes -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -I/usr/include/apr-1 -I/usr/include/apr-1 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -fno-strict-aliasing -I/usr/include/httpd -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/apache2/module_libboost_oxt/aggregate.o -c ext/apache2/module_libboost_oxt/aggregate.cpp
+11:09:16: mkdir -p ext/apache2/module_libboost_oxt
+11:09:16: rm -rf ext/apache2/module_libboost_oxt.a
+11:09:16: ar cru ext/apache2/module_libboost_oxt.a ext/apache2/module_libboost_oxt/aggregate.o
+11:09:16: ranlib ext/apache2/module_libboost_oxt.a
+11:09:16: gcc -Iext -Iext/common -fPIC -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -Wno-attributes -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -I/usr/include/apr-1 -I/usr/include/apr-1 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -fno-strict-aliasing -I/usr/include/httpd -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/apache2/mod_passenger.o -c ext/apache2/mod_passenger.c
+11:09:16: g++ -Iext -Iext/common -fPIC -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -Wno-attributes -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -I/usr/include/apr-1 -I/usr/include/apr-1 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -fno-strict-aliasing -I/usr/include/httpd -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/apache2/Configuration.o -c ext/apache2/Configuration.cpp
+11:09:19: g++ -Iext -Iext/common -fPIC -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -Wno-attributes -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -I/usr/include/apr-1 -I/usr/include/apr-1 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -fno-strict-aliasing -I/usr/include/httpd -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/apache2/Bucket.o -c ext/apache2/Bucket.cpp
+11:09:21: g++ -Iext -Iext/common -fPIC -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -Wno-attributes -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -I/usr/include/apr-1 -I/usr/include/apr-1 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -fno-strict-aliasing -I/usr/include/httpd -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/apache2/Hooks.o -c ext/apache2/Hooks.cpp
+11:09:27: g++ -shared ext/apache2/Configuration.o ext/apache2/Bucket.o ext/apache2/Hooks.o ext/apache2/mod_passenger.o -fPIC -o ext/apache2/mod_passenger.so -fPIC -fvisibility=hidden -DVISIBILITY_ATTRIBUTE_SUPPORTED -Wno-attributes -DLINUX=2 -D_REENTRANT -D_GNU_SOURCE -I/usr/include/apr-1 -I/usr/include/apr-1 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -fno-strict-aliasing -I/usr/include/httpd -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS ext/apache2/module_libpassenger_common.a ext/apache2/module_libboost_oxt.a -fPIC -lapr-1 -laprutil-1 -lpthread
+11:09:27: mkdir -p ext/common/libpassenger_common
+11:09:27: g++ -Iext -Iext/common -Iext/libev  -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/common/libpassenger_common/aggregate.o -c ext/common/libpassenger_common/aggregate.cpp
+11:09:33: rm -rf ext/common/libpassenger_common.a
+11:09:33: ar cru ext/common/libpassenger_common.a ext/common/libpassenger_common/aggregate.o
+11:09:33: ranlib ext/common/libpassenger_common.a
+11:09:33: mkdir -p ext/common/libboost_oxt
+11:09:33: g++ -Iext  -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS -o ext/common/libboost_oxt/aggregate.o -c ext/common/libboost_oxt/aggregate.cpp
+11:09:36: mkdir -p ext/common/libboost_oxt
+11:09:36: rm -rf ext/common/libboost_oxt.a
+11:09:36: ar cru ext/common/libboost_oxt.a ext/common/libboost_oxt/aggregate.o
+11:09:36: ranlib ext/common/libboost_oxt.a
+11:09:36: mkdir -p agents/apache2
+11:09:36: g++ ext/apache2/HelperAgent.cpp -o agents/apache2/PassengerHelperAgent -Iext -Iext/common -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS ext/common/libpassenger_common.a ext/common/libboost_oxt.a -lpthread -rdynamic
+11:09:45: g++ ext/common/Watchdog.cpp -o agents/PassengerWatchdog -Iext -Iext/common -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS ext/common/libpassenger_common.a ext/common/libboost_oxt.a -lpthread -rdynamic
+11:09:49: cd ext/libev/ && sh /usr/lib64/ruby/gems/1.9.1/gems/passenger-3.0.17/ext/libev/configure --disable-shared --enable-static
+11:09:58: rm -f ext/libev//libev.la
+11:09:58: cd ext/libev/ && make libev.la
+11:10:00: g++ ext/common/LoggingAgent/Main.cpp -o agents/PassengerLoggingAgent -Iext -Iext/common -Iext/libev   -D_REENTRANT -I/usr/local/include -DHASH_NAMESPACE="__gnu_cxx" -DHASH_FUN_H="<ext/hash_fun.h>" -DHAS_ALLOCA_H -DHAS_SFENCE -DHAS_LFENCE -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-long-long -Wno-missing-field-initializers -g -DPASSENGER_DEBUG -DBOOST_DISABLE_ASSERTS ext/common/libpassenger_common.a ext/common/libboost_oxt.a ext/libev/.libs/libev.a -L/usr/kerberos/lib64 -lcurl -ldl -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lidn -lssl -lcrypto -lz -lz -lpthread -rdynamic
+11:10:07: mkdir -p 'ext/ruby/ruby-1.9.3-x86_64-linux/'
+11:10:07: cd 'ext/ruby/ruby-1.9.3-x86_64-linux/' && /usr/bin/ruby '/usr/lib64/ruby/gems/1.9.1/gems/passenger-3.0.17/ext/ruby/extconf.rb'
+11:10:08: cd 'ext/ruby/ruby-1.9.3-x86_64-linux/' && make
+11:10:08: writing passenger version to passenger.conf
+11:10:08: Script exit status: 0
+11:10:08: Script duration: 104.348106
+********************************************************************************
+*RS>                RightScript: 'XXXXOne AIO httpd config'                 ****
+11:10:09: Script exit status: 0
+11:10:09: Script duration: 0.81051
+********************************************************************************
+*RS>            RightScript: 'XXXX WEB install root certificate'            ****
+11:10:09: Script exit status: 0
+11:10:09: Script duration: 0.799638
+11:10:09: ======== redis::default : START ========
+11:10:09: Copying redis-2.6.7-0.x86_64 from source directory to tmp directory for installation
+11:10:10: Installing redis-2.6.7-0.x86_64 from tmp directory
+11:10:10: Installing package[rpm] version 2.6.7-0
+11:10:10: Script duration: 0.265485
+11:10:10: Cpoying redis config file to /etc/redis.conf
+11:10:10: Backing up current file at /etc/redis.conf
+11:10:10: Backing up cookbook_file[/etc/redis.conf] to /etc/redis.conf.chef-20131016111010
+11:10:10: starting redis service on port 6379
+11:10:10: redis-server is stopped
+11:10:10: Script duration: 0.105278
+11:10:10: Starting redis-server:
+11:10:10: [
+11:10:10: OK
+11:10:10: ]
+11:10:10: Script duration: 0.154813
+11:10:10: Started service service[redis] successfully
+11:10:10: ======== redis::default : END ========
+********************************************************************************
+*RS>         RightScript: 'XXXX Apply XXXXID Production Cert v1'         ****
+11:10:11: Skipping Apply XXXXID Production Cert script Server not in PRODUCTION mode
+11:10:11: Removing XXXXIdentity.pfx
+11:10:11: Script exit status: 0
+11:10:11: Script duration: 0.87754
+********************************************************************************
+*RS>            RightScript: 'Set platform background services'             ****
+11:10:12: not configuring background jobs because BACKGROUND_SERVER input is not set to true
+11:10:12: Script exit status: 0
+11:10:12: Script duration: 0.899441
+********************************************************************************
+*RS>            RightScript: 'XXXX--XXXX- Rails VHost Config v1'             ****
+11:10:14: Finished configuring httpd.conf file
+Running copy SSL cert method
+Configuring vhost file in /etc/httpd/conf.d
+configuring vhost.conf.tmpl
+Configuring vhost file in /etc/httpd/conf.d
+configuring vhost.conf.tmpl
+11:10:14: Script exit status: 0
+11:10:14: Script duration: 1.832115
+********************************************************************************
+*RS>              RightScript: 'Configure Passenger settings'               ****
+11:10:15: + test '' = true
+11:10:15: + '[' -w /etc/httpd/conf.d/passenger.conf ']'
+11:10:15: + echo 'Writting configuration to passenger config file'
+11:10:15: Writting configuration to passenger config file
+11:10:15: + echo ' '
+11:10:15: + echo 'PassengerMaxPoolSize 10'
+11:10:15: + perl -p -i -e 's/PassengerRuby \/usr\/bin\/ruby/PassengerRuby \/opt\/XXXX\/XXXX\/tuned_ruby/' /etc/httpd/conf.d/passenger.conf
+11:10:15: + service httpd restart
+11:10:15: Stopping httpd:
+11:10:15: [
+11:10:15: OK
+11:10:15: ]
+11:10:15: Starting httpd:
+11:10:15: [Wed Oct 16 11:10:15 2013] [warn] NameVirtualHost *:443 has no VirtualHosts
+11:10:15: [Wed Oct 16 11:10:15 2013] [warn] NameVirtualHost *:80 has no VirtualHosts
+11:10:15: [
+11:10:15: OK
+11:10:15: ]
+11:10:15: Script exit status: 0
+11:10:15: Script duration: 1.306671
+********************************************************************************
+*RS>              RightScript: 'XXXX lock apache for testing'               ****
+11:10:16: Adding
+11:10:16: password for user <hidden credential>
+11:10:16: Stopping httpd:
+11:10:16: [
+11:10:16: OK
+11:10:16: ]
+11:10:16: Starting httpd:
+11:10:16: [Wed Oct 16 11:10:16 2013] [warn] NameVirtualHost *:443 has no VirtualHosts
+11:10:16: [Wed Oct 16 11:10:16 2013] [warn] NameVirtualHost *:80 has no VirtualHosts
+11:10:17: [
+11:10:17: OK
+11:10:17: ]
+11:10:17: Script exit status: 0
+11:10:17: Script duration: 1.331131
+********************************************************************************
+*RS>       RightScript: 'XXXX - Write commission junction key v1'        ****
+11:10:18: Script exit status: 0
+11:10:18: Script duration: 0.948202
+********************************************************************************
+*RS>          RightScript: 'XXXX SYS memcached server install v4'           ****
+11:10:18: Listening on any IP
+11:10:19: Loaded plugins: fastestmirror
+11:10:19: Loading mirror speeds from cached hostfile
+11:10:19: * addons: ec2-us-east-mirror3.rightscale.com
+11:10:19: * base: ec2-us-east-mirror3.rightscale.com
+11:10:19: * centosplus: ec2-us-east-mirror3.rightscale.com
+11:10:19: * epel: ec2-us-east-mirror3.rightscale.com
+11:10:19: * extras: ec2-us-east-mirror3.rightscale.com
+11:10:19: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+11:10:19: * updates: ec2-us-east-mirror3.rightscale.com
+11:10:19: Setting up Install Process
+11:10:21: Resolving Dependencies
+11:10:21: --> Running transaction check
+11:10:21: ---> Package memcached.x86_64 0:1.4.5-1.el5 set to be updated
+11:10:23: --> Finished Dependency Resolution
+11:10:23: Dependencies Resolved
+11:10:23: ================================================================================
+ Package            Arch            Version                 Repository     Size
+================================================================================
+Installing:
+ memcached          x86_64          1.4.5-1.el5             epel           72 k
+
+Transaction Summary
+================================================================================
+Install       1 Package(s)
+Upgrade       0 Package(s)
+11:10:23: Total download size: 72 k
+11:10:23: Downloading Packages:
+11:10:23: Running rpm_check_debug
+11:10:23: Running Transaction Test
+11:10:23: Finished Transaction Test
+11:10:23: Transaction Test Succeeded
+11:10:23: Running Transaction
+11:10:23: Installing     : memcached                                                1/1
+11:10:23: Installed:
+  memcached.x86_64 0:1.4.5-1.el5
+11:10:23: Complete!
+11:10:23: Stopping memcached:
+11:10:23: [
+11:10:23: FAILED
+11:10:23: ]
+11:10:23: Starting memcached:
+11:10:23: [
+11:10:23: OK
+11:10:23: ]
+11:10:23: Script exit status: 0
+11:10:23: Script duration: 5.773729
+********************************************************************************
+*RS>              RightScript: 'SYS Monitoring install - 11H1'              ****
+11:10:24: + set +e
++ which rs_tag
++ '[' 0 -ne 0 ']'
++ set -e
++ package_comment='\n#RightScale: do not allow collectd version to be modified.\n#Collectd packages handled by SYS Monitoring install rightscript'
++ '[' centos = ubuntu ']'
++ '[' centos = centos ']'
++ config=/etc/collectd.conf
++ plugin_dir=/etc/collectd.d
++ cron_service=crond
++ yum_epel_config=/etc/yum.repos.d/Epel.repo
++ mkdir -p /etc/collectd.d
++ test '' = true
++ '[' centos = ubuntu ']'
++ yum erase -y collectd
+11:10:24: /usr/bin/rs_tag
+11:10:25: Loaded plugins: fastestmirror
+11:10:25: Setting up Remove Process
+11:10:25: Resolving Dependencies
+11:10:25: --> Running transaction check
+11:10:25: ---> Package collectd.x86_64 0:4.10.9-1.el5 set to be erased
+11:10:25: --> Processing Dependency: collectd = 4.10.9-1.el5 for package: collectd-apache
+11:10:25: --> Running transaction check
+11:10:25: ---> Package collectd-apache.x86_64 0:4.10.9-1.el5 set to be erased
+11:10:26: --> Finished Dependency Resolution
+11:10:26: Dependencies Resolved
+11:10:26: ================================================================================
+ Package               Arch         Version               Repository       Size
+================================================================================
+Removing:
+ collectd              x86_64       4.10.9-1.el5          installed       1.2 M
+Removing for dependencies:
+ collectd-apache       x86_64       4.10.9-1.el5          installed        15 k
+
+Transaction Summary
+================================================================================
+Remove        2 Package(s)
+Reinstall     0 Package(s)
+Downgrade     0 Package(s)
+11:10:26: Downloading Packages:
+11:10:26: Running rpm_check_debug
+11:10:26: Running Transaction Test
+11:10:26: Finished Transaction Test
+11:10:26: Transaction Test Succeeded
+11:10:26: Running Transaction
+11:10:26: Erasing        : collectd                                                 1/2
+11:10:26: Erasing        : collectd-apache                                          2/2
+11:10:26: Removed:
+  collectd.x86_64 0:4.10.9-1.el5
+
+Dependency Removed:
+  collectd-apache.x86_64 0:4.10.9-1.el5
+11:10:26: Complete!
+11:10:26: + rpm -i /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collectd-4.10.0-4.el5.x86_64.rpm
+11:10:26: + echo -e '\n#RightScale: do not allow collectd version to be modified.\n#Collectd packages handled by SYS Monitoring install rightscript\nexclude=collectd\n'
+11:10:26: + echo 'Package Installation Complete.'
+11:10:26: Package Installation Complete.
+11:10:26: + echo
+11:10:26: + write_config
+11:10:26: + '[' -e /etc/collectd.conf ']'
+11:10:26: ++ date +%Y%m%d%H%M%S
+11:10:26: + mv -f /etc/collectd.conf /etc/collectd.conf.bak.20131016111026
+11:10:26: + cp -f /var/cache/rightscale/right_scripts_content/rs_attach23457822516400/collectd-client.conf /etc/collectd.conf
+11:10:26: + sed -i -e 's/^Hostname.*/Hostname "01-2GUTBJO9EV80B"/' /etc/collectd.conf
+11:10:26: + '[' -n sketchy1-162.rightscale.com ']'
+11:10:26: + sed -i -e 's/sketchy\.rightscale\.com/sketchy1-162.rightscale.com/' /etc/collectd.conf
+11:10:26: ++ uname -m
+11:10:26: + '[' x86_64 == x86_64 ']'
+11:10:26: + sed -i -e s:/usr/lib/collectd:/usr/lib64/collectd: /etc/collectd.conf
+11:10:26: + echo 'Include "/etc/collectd.d/*.conf"'
+11:10:26: ++ grep 'service collectd restart' /etc/crontab
+11:10:26: + '[' -z '' ']'
+11:10:26: + echo '00 4 * * * root service collectd restart > /dev/null'
+11:10:26: + echo 'Installed nightly restart crontask'
+11:10:26: Installed nightly restart crontask
+11:10:26: + processes='  process "collectd"'
+11:10:26: + '[' '!' -z httpd.worker ']'
+11:10:26: + for p in '$MON_PROCESSES'
+11:10:26: + processes='  process "collectd"\n  process "httpd.worker"'
+11:10:26: + echo 'Monitoring httpd.worker process'
+11:10:26: Monitoring httpd.worker process
+11:10:26: + '[' '!' -z httpd/httpd ']'
+11:10:26: + for p in '$MON_PROCESSMATCH'
+11:10:26: ++ echo httpd/httpd
+11:10:26: ++ cut -d/ -f1
+11:10:26: + p_name=httpd
+11:10:26: ++ echo httpd/httpd
+11:10:26: ++ cut -d/ -f2
+11:10:26: + p_regex=httpd
+11:10:26: + processes='  process "collectd"\n  process "httpd.worker"\n  processmatch "httpd" "httpd"'
+11:10:26: + echo 'Monitoring httpd as httpd'
+11:10:26: Monitoring httpd as httpd
+11:10:26: + process_conf=/etc/collectd.d/processes.conf
+11:10:26: + echo -e 'LoadPlugin Processes'
+11:10:26: + echo -e '<Plugin processes>'
+11:10:26: + echo -e '  process "collectd"\n  process "httpd.worker"\n  processmatch "httpd" "httpd"'
+11:10:26: + echo -e '</Plugin>'
+11:10:26: + '[' centos = centos ']'
+11:10:26: + patch -N -p 0 -l -c
+11:10:26: patching file /etc/init.d/collectd
+11:10:26: + service collectd restart
+11:10:26: Stopping collectd:
+11:10:26: [
+11:10:26: FAILED
+11:10:26: ]
+11:10:26: Starting collectd:
+11:10:26: [
+11:10:26: OK
+11:10:26: ]
+11:10:26: + rs_tag -a rs_monitoring:state=active
+11:10:27: Request to add tag 'rs_monitoring:state=active' sent successfully.
+11:10:27: + echo 'Setting monitoring active tag'
+11:10:27: Setting monitoring active tag
+11:10:27: Script exit status: 0
+11:10:27: Script duration: 3.680562
+********************************************************************************
+*RS>              RightScript: 'SYS Monitoring Apache Add v1'               ****
+11:10:28: Reloading httpd:
+11:10:28: Setting alert to httpd for prefork
+11:10:28: Stopping collectd:
+11:10:32: [
+11:10:32: OK
+11:10:32: ]
+11:10:32: Starting collectd:
+11:10:32: [
+11:10:32: OK
+11:10:32: ]
+11:10:32: Script exit status: 0
+11:10:32: Script duration: 5.317171
+********************************************************************************
+*RS>             RightScript: 'Install Newrelic server monitor'             ****
+11:10:33: + test '' = true
++ test true = true
++ echo 'Installing Newrelic Server monitor'
++ rpm -Uvh http://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm
+11:10:33: Installing Newrelic Server monitor
+11:10:33: warning:
+11:10:33: /var/tmp/rpm-xfer.N6eIJW: Header V3 DSA signature: NOKEY, key ID 548c16bf
+11:10:33: Retrieving http://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm
+Preparing...
+11:10:33: ##################################################
+11:10:33: newrelic-repo
+11:10:33: ########################################
+11:10:33: #######
+11:10:33: ###
+11:10:33: + yum -y install newrelic-sysmond
+11:10:34: Loaded plugins: fastestmirror
+11:10:34: Loading mirror speeds from cached hostfile
+11:10:34: * addons: ec2-us-east-mirror3.rightscale.com
+11:10:34: * base: ec2-us-east-mirror3.rightscale.com
+11:10:34: * centosplus: ec2-us-east-mirror3.rightscale.com
+11:10:34: * epel: ec2-us-east-mirror3.rightscale.com
+11:10:34: * extras: ec2-us-east-mirror3.rightscale.com
+11:10:34: * rightscale-epel: ec2-us-east-mirror3.rightscale.com
+11:10:34: * updates: ec2-us-east-mirror3.rightscale.com
+11:10:34: Excluding Packages from none
+11:10:34: Finished
+11:10:34: Setting up Install Process
+11:10:36: Resolving Dependencies
+11:10:36: --> Running transaction check
+11:10:36: ---> Package newrelic-sysmond.x86_64 0:1.2.0.257-1 set to be updated
+11:10:38: --> Finished Dependency Resolution
+11:10:38: Dependencies Resolved
+11:10:38: ================================================================================
+ Package                 Arch          Version            Repository       Size
+================================================================================
+Installing:
+ newrelic-sysmond        x86_64        1.2.0.257-1        newrelic        1.2 M
+
+Transaction Summary
+================================================================================
+Install       1 Package(s)
+Upgrade       0 Package(s)
+11:10:38: Total download size: 1.2 M
+11:10:38: Downloading Packages:
+11:10:38: warning:
+11:10:38: rpmts_HdrFromFdno: Header V3 DSA signature: NOKEY, key ID 548c16bf
+11:10:38: Importing GPG key 0x548C16BF "New Relic <support@newrelic.com>" from /etc/pki/rpm-gpg/RPM-GPG-KEY-NewRelic
+11:10:38: Running rpm_check_debug
+11:10:38: Running Transaction Test
+11:10:38: Finished Transaction Test
+11:10:38: Transaction Test Succeeded
+11:10:38: Running Transaction
+11:10:39: Installing     : newrelic-sysmond                                         1/1
+11:10:39: Installed:
+  newrelic-sysmond.x86_64 0:1.2.0.257-1
+11:10:39: Complete!
+11:10:39: + nrsysmond-config --set license_key=251fd5adf4323bd267c5978f199f91e29df3f405
+11:10:39: + /etc/init.d/newrelic-sysmond start
+11:10:39: Starting newrelic-sysmond:
+11:10:40: [
+11:10:40: OK
+11:10:40: ]
+11:10:40: Script exit status: 0
+11:10:40: Script duration: 7.57703
+********************************************************************************
+*RS>               RightScript: 'XXXX monit configuration'               ****
+11:10:41: monit directory does not exist in application resource directory
+ path checked was /home/rails/myXXXXone_na/current/resource/monit
+running command service monit restart
+11:10:41: Script exit status: 0
+11:10:41: Script duration: 0.949383
+********************************************************************************
+*RS>     RightScript: 'XXXX DNS dnsmadeeasy external id register v3'      ****
+11:10:42: Skipping DNSMADEEASY script because the REGISTER_DNS input is not set to true
+11:10:42: Script exit status: 0
+11:10:42: Script duration: 1.423927
+********************************************************************************
+*RS>        RightScript: 'XXXX update SSL Cert Auth Bundle via GIT'         ****
+11:10:45: Updating system SSL cert bundle.
+.
+Validating cacert.pem file exists.
+
+Copying file from /opt/XXXX/support_files/cacert.pem to /etc/pki/tls/certs/ca-bundle.crt.
+
+Completed updating SSL cert bundle.
+11:10:45: Script exit status: 0
+11:10:45: Script duration: 2.281988
+********************************************************************************
+*RS>                  RightScript: 'Connect to ELB - 11H1'                  ****
+11:10:50: I, [2013-10-16T11:10:49.849034 #12032]  INFO -- : New RightAws::ElbInterface using shared connections mode
+I, [2013-10-16T11:10:49.849647 #12032]  INFO -- : Opening new HTTPS connection to elasticloadbalancing.us-east-1.amazonaws.com:443
+.. registering with ELB
+DONE!
+11:10:50: Script exit status: 0
+11:10:50: Script duration: 5.396094
+*RS> Duration: 1023.21 seconds
+11:10:50: Chef Run complete in 1019.434099 seconds
+*RS> boot completed: SYS Timezone set v1, MAIL Postfix Local Delivery v1, XXXX
+*RS> SSHD Verbose Logging, XXXX Apply CentOS Security Updates, XXXX XXXX Install
+*RS> Ruby 1.9.3 v1, XXXX Install Python 2.6, MISC ssh priv key install v2, XXXX
+*RS> SYS RAILS_ENV & XXX config into system profile v1, XXXX XXXX Ops UTIL
+*RS> install script, XXXXOne SYS Syslog Remote Logging Client, DB MySQL gem
+*RS> install v4, XXXX Install libxml, XXXX Ruby custom gem install v5, AIO GIT
+*RS> PULL TARBALL, restructure platform directory, Link latest release to
+*RS> current, set XXX gem credentials, Bundle install multi-app, Configure
+*RS> application settings, MIGRATE_RAILS_APP, Write XXXX version file, XXXX -
+*RS> Install East Asian Font Support, WEB apache base install v6, Install
+*RS> passenger, XXXXOne AIO httpd config, XXXX WEB install root certificate,
+*RS> redis::default, XXXX Apply XXXXID Production Cert v1, Set platform
+*RS> background services, XXXX--XXXX- Rails VHost Config v1, Configure Passenger
+*RS> settings, XXXX lock apache for testing, XXXX - Write commission junction
+*RS> key v1, XXXX SYS memcached server install v4, SYS Monitoring install -
+*RS> 11H1, SYS Monitoring Apache Add v1, Install Newrelic server monitor,
+*RS> XXXX monit configuration, XXXX DNS dnsmadeeasy external id register
+*RS> v3, XXXX update SSL Cert Auth Bundle via GIT, Connect to ELB - 11H1
