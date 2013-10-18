@@ -1,15 +1,16 @@
-# sinatra + html5bp starter app 
+# View runtimes for bootscripts in Rightscale
 
-## components
 
-  - stripped down `index.html` and `style.css` from [HTML5 boilerplate](https://github.com/h5bp/html5-boilerplate)
-  - development [jquery 1.7.1](http://jquery.com/) version (uncompresed) 
-  - development [modernizr 2.5.3](http://www.modernizr.com) version (uncompressed)
+## run
 
-## config
+    $ bundle
+    $ rackup
 
-    $ gem install shotgun
-    $ gem install sinatra
-    $ shotgun -p 4567 app.rb
+View at: localhost:9292
 
-View at: localhost:4567
+### Input
+#### Paste in contents of full audit entry from Rightscale audits area on instance
+![Input](http://i.imgur.com/HTuYoxQ.png)
+
+###Output
+![output](http://i.imgur.com/UZOurRd.png)
