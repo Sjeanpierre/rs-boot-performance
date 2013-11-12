@@ -12,6 +12,6 @@ get '/app.js' do
 end
 
 post '/parse' do
-  script_info = process_audit(params[:post][:data])
+  script_info = BootTimer.new(params[:post][:data]).process
   erb :results, :locals => {:data => script_info}
 end

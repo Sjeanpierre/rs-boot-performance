@@ -1,49 +1,49 @@
 #!/usr/bin/env ruby
 
+class BootTimer
 
-$script_names = []
-$script_durations = []
-$name_strings_to_remove = %w(*RS> **** RightScript:)
-$duration_timestamp_regex = Regexp.new(/\d.:\d\d.\d\d./)
-$duration_strings_to_remove = %w(Script duration:)
+  NAME_STRINGS_TO_REMOVE = %w(*RS> **** RightScript:)
+  DURATION_STRINGS_TO_REMOVE = %w(Script duration:)
+  DURATION_TIMESTAMP_REGEX = Regexp.new(/\d.:\d\d.\d\d./)
+  SCRIPT_NAME_REGEX = Regexp.new('RightScript:')
+  SCRIPT_DURATION_REGEX = Regexp.new('Script duration:')
+  BEGIN_SKIP_REGEX = Regexp.new('======== redis::default : START ========')
+  END_SKIP_REGEX = Regexp.new('======== redis::default : END ========')
 
-
-
-# Will receive single line containing name and strip out known trash
-def extract_script_name(line)
-  script_name = line.split.delete_if {|line_part|$name_strings_to_remove.include?(line_part)}.join(' ').delete("'")
-  $script_names.push(script_name)
-end
-
-# Will receive single line containing duration and strip out known trash
-def extract_script_duration(line)
-  script_duration = line.split.delete_if {|line_part| $duration_strings_to_remove.include?(line_part)}.delete_if {|line_part| line_part.match($duration_timestamp_regex)}.join(' ')
-  $script_durations.push(script_duration)
-end
-
-def loop_through_file(filename)
-  script_name_regex = Regexp.new('RightScript:')
-  script_duration_regex = Regexp.new('Script duration:')
-  skip_start = Regexp.new('======== redis::default : START ========')
-  skip_end = Regexp.new('======== redis::default : END ========')
-  in_skip_block = false
-  filename.each_line do |line|
-    in_skip_block = true if line.match(skip_start)
-    in_skip_block = false if line.match(skip_end)
-    next if in_skip_block
-    if line.match(script_name_regex)
-      extract_script_name(line)
-    elsif line.match(script_duration_regex)
-      extract_script_duration(line)
-    end
+  def initialize(data)
+    @script_names = []
+    @script_durations = []
+    @data = data
   end
-end
 
+  def process
+    in_skip_block = false
+    @data.each_line do |line|
+      in_skip_block = true if line.match(BEGIN_SKIP_REGEX)
+      in_skip_block = false if line.match(END_SKIP_REGEX)
+      next if in_skip_block
+      if line.match(SCRIPT_NAME_REGEX)
+        extract_script_name(line)
+      elsif line.match(SCRIPT_DURATION_REGEX)
+        extract_script_duration(line)
+      end
+    end
+    #noinspection RubyHashKeysTypesInspection
+    Hash[*@script_names.zip(@script_durations).flatten]
+  end
 
+  # Will receive single line containing name and strip out known trash
+  def extract_script_name(line)
+    script_name = line.split.delete_if { |line_part| NAME_STRINGS_TO_REMOVE.include?(line_part) }.join(' ').delete("'")
+    @script_names.push(script_name)
+  end
 
-def process_audit(contents)
-  loop_through_file(contents)
-  Hash[*$script_names.zip($script_durations).flatten]
+  # Will receive single line containing duration and strip out known trash
+  def extract_script_duration(line)
+    script_duration = line.split.delete_if { |line_part| DURATION_STRINGS_TO_REMOVE.include?(line_part) }.delete_if { |line_part| line_part.match(DURATION_TIMESTAMP_REGEX) }.join(' ')
+    @script_durations.push(script_duration)
+  end
+
 end
 
 
