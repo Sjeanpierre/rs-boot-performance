@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'coffee-script'
-require 'pry'
 require_relative 'boottime.rb'
 
 get '/' do
